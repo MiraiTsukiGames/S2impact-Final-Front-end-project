@@ -9,7 +9,7 @@ const { contextTheme, setContextTheme } = useThemeContext();
 
 const getGradientClasses = () => {
   if (contextTheme === "Light") {
-    return "bg-gradient-to-b from-rose-700 via-rose-500 to-amber-200";
+    return "bg-gradient-to-b from-yellow-300 via-orange-500 to-darkorange-700";
   } else {
     return "bg-gradient-to-b from-slate-950 via-slate-800 to-cyan-800";
   }
