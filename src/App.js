@@ -1,6 +1,7 @@
 import React from "react";
 import { useThemeContext } from "./context/theme";
 import { RiSunLine, RiMoonLine } from "react-icons/ri";
+import Footer from "./components/footer/footer";
 import './App.css';
 
 function App() {
@@ -9,7 +10,7 @@ const { contextTheme, setContextTheme } = useThemeContext();
 
 const getGradientClasses = () => {
   if (contextTheme === "Light") {
-    return "bg-gradient-to-b from-yellow-300 via-orange-500 to-darkorange-700";
+    return "bg-gradient-to-b from-yellow-300 via-darkorange-700 to-orange-500";
   } else {
     return "bg-gradient-to-b from-slate-950 via-slate-800 to-cyan-800";
   }
@@ -25,6 +26,7 @@ const getGradientClasses = () => {
       <h1 className='text-3xl lg:text-4xl align-middle text-center'>Hello</h1>
         {/* Il contenuto principale della tua applicazione */}
       </main>
+      <Footer />
     </div>
   );
 }
