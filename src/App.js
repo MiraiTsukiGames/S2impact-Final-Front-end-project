@@ -1,5 +1,6 @@
 import React from "react";
 import { useThemeContext } from "./context/theme";
+import { RiSunLine, RiMoonLine } from "react-icons/ri";
 import './App.css';
 
 function App() {
@@ -18,7 +19,7 @@ const getGradientClasses = () => {
     <div className={`${getGradientClasses()} text-white p-8 mx-auto`}>
       <header className="py-4">
       <button onClick={() => setContextTheme(contextTheme === "Light" ? "Dark" : "Light")}>
-       {contextTheme} Mode</button>
+      {contextTheme === "Light" ? <RiSunLine size={32} /> : <RiMoonLine size={32} />}</button>
       </header>
       <main className="flex items-center justify-center h-screen">
       <h1 className='text-3xl lg:text-4xl align-middle text-center'>Hello</h1>
