@@ -16,17 +16,14 @@ const getGradientClasses = () => {
 
   return (
     <div className={`${getGradientClasses()} text-white p-8 mx-auto`}>
-    <div className="flex items-center justify-center h-screen">
       <header className="py-4">
-      <h1 className='text-3xl lg:text-4xl align-middle text-center'>Hello</h1>
       <button onClick={() => setContextTheme(contextTheme === "light" ? "dark" : "light")}>
-          {contextTheme === "light" ? "Dark" : "Light"} Mode
-        </button>
+       {contextTheme} Mode</button>
       </header>
-      <main>
+      <main className="flex items-center justify-center h-screen">
+      <h1 className='text-3xl lg:text-4xl align-middle text-center'>Hello</h1>
         {/* Il contenuto principale della tua applicazione */}
       </main>
-    </div>
     </div>
   );
 }
