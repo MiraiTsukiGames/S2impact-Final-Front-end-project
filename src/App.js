@@ -18,7 +18,7 @@ const getGradientClasses = () => {
   return (
     <div className={`${getGradientClasses()} text-white p-8 mx-auto`}>
       <header className="py-4">
-      <button onClick={() => setContextTheme(contextTheme === "Light" ? "Dark" : "Light")}>
+      <button className="cursor-pointer" onClick={() => setContextTheme(contextTheme === "Light" ? "Dark" : "Light")}>
       {contextTheme === "Light" ? <RiSunLine size={32} /> : <RiMoonLine size={32} />}</button>
       </header>
       <main className="flex items-center justify-center h-screen">
