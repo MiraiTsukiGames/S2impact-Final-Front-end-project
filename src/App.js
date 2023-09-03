@@ -7,7 +7,7 @@ function App() {
 const { contextTheme, setContextTheme } = useThemeContext();
 
 const getGradientClasses = () => {
-  if (contextTheme === "light") {
+  if (contextTheme === "Light") {
     return "bg-gradient-to-b from-rose-700 via-rose-500 to-amber-200";
   } else {
     return "bg-gradient-to-b from-slate-950 via-slate-800 to-cyan-800";
@@ -17,7 +17,7 @@ const getGradientClasses = () => {
   return (
     <div className={`${getGradientClasses()} text-white p-8 mx-auto`}>
       <header className="py-4">
-      <button onClick={() => setContextTheme(contextTheme === "light" ? "dark" : "light")}>
+      <button onClick={() => setContextTheme(contextTheme === "Light" ? "Dark" : "Light")}>
        {contextTheme} Mode</button>
       </header>
       <main className="flex items-center justify-center h-screen">
