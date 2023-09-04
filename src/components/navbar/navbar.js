@@ -1,39 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
-    // State to track if the sidebar is open or not
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    
   return (
     <nav>
-     {/*sidebar menu*/}
-     <div className={`navbar-sidebar ${isSidebarOpen ? "open" : ""}`}>
-     <button
-        title="hamburger-menu"
-        className="hamburger"
-        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-      >menu</button>
-     <ul className="navbar-nav">
-       <li className="nav-item">
-         <Link to="/">Home</Link>
+    <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-center">
+
+            </div>
+     <div className="flex">
+     <div className="hidden sm:flex sm:items-center">
+     <ul className="flex space-x-4 justify-center">
+       <li>
+         <Link to="/" className="hover:bg-gray-700 px-3 py-2 rounded-md">Home</Link>
        </li>
-       <li className="nav-item">
+       <li>
          <Link to="/co2">CO2</Link>
        </li>
-       <li className="nav-item">
+       <li>
          <Link to="/methane">Methane</Link>
        </li>
-       <li className="nav-item">
+       <li>
          <Link to="/no2">NO2</Link>
        </li>
-       <li className="nav-item">
+       <li>
          <Link to="/polarice">Polarice</Link>
        </li>
-       <li className="nav-item">
+       <li>
          <Link to="/temperature">Temperature</Link>
        </li>
      </ul>
+     </div>
    </div>
+        </div>
+    
    </nav>
   )
 }
