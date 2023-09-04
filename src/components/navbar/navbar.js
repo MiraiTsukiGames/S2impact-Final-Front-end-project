@@ -6,6 +6,7 @@ export default function Navbar() {
   return (
     <nav>
     <div className="max-w-7xl mx-auto px-4">
+    <div className="flex justify-between h-16">
             <div className="flex items-center">
 
             </div>
@@ -16,25 +17,25 @@ export default function Navbar() {
          <Link to="/" className="hover:bg-gray-700 px-3 py-2 rounded-md">Home</Link>
        </li>
        <li>
-         <Link to="/co2">CO2</Link>
+         <Link to="/co2" className="hover:bg-gray-700 px-3 py-2 rounded-md">CO2</Link>
        </li>
        <li>
-         <Link to="/methane">Methane</Link>
+         <Link to="/methane" className="hover:bg-gray-700 px-3 py-2 rounded-md">Methane</Link>
        </li>
        <li>
-         <Link to="/no2">NO2</Link>
+         <Link to="/no2" className="hover:bg-gray-700 px-3 py-2 rounded-md">NO2</Link>
        </li>
        <li>
-         <Link to="/polarice">Polarice</Link>
+         <Link to="/polarice" className="hover:bg-gray-700 px-3 py-2 rounded-md">Polarice</Link>
        </li>
        <li>
-         <Link to="/temperature">Temperature</Link>
+         <Link to="/temperature" className="hover:bg-gray-700 px-3 py-2 rounded-md">Temperature</Link>
        </li>
      </ul>
      </div>
    </div>
         </div>
-    
+        </div>
    </nav>
   )
 }
