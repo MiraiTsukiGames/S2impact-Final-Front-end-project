@@ -1,41 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
-    
-  return (
-    <nav>
-    <div className="max-w-7xl mx-auto px-4">
-    <div className="flex justify-between h-16">
-            <div className="flex items-center">
+  const [isOpen, setIsOpen] = useState(false);
 
-            </div>
-     <div className="flex">
-     <div className="hidden sm:flex sm:items-center">
-     <ul className="flex space-x-4 justify-center">
-       <li>
-         <Link to="/" className="hover:bg-gray-700 px-3 py-2 rounded-md">Home</Link>
-       </li>
-       <li>
-         <Link to="/co2" className="hover:bg-gray-700 px-3 py-2 rounded-md">CO2</Link>
-       </li>
-       <li>
-         <Link to="/methane" className="hover:bg-gray-700 px-3 py-2 rounded-md">Methane</Link>
-       </li>
-       <li>
-         <Link to="/no2" className="hover:bg-gray-700 px-3 py-2 rounded-md">NO2</Link>
-       </li>
-       <li>
-         <Link to="/polarice" className="hover:bg-gray-700 px-3 py-2 rounded-md">Polarice</Link>
-       </li>
-       <li>
-         <Link to="/temperature" className="hover:bg-gray-700 px-3 py-2 rounded-md">Temperature</Link>
-       </li>
-     </ul>
-     </div>
-   </div>
-        </div>
-        </div>
-   </nav>
-  )
-}
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    /*navbar section*/
+    <nav className='flex justify-end items-center'>
+    {/*hamburger button*/}
+    <button
+        title="hamburger-menu"
+        className="hamburger bg-gray-800 rounded-full p-2"
+        onClick={() => toggleNavbar(!isOpen)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="white"
+        >
+          <path
+            fillRule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
+      {/*sidebar menu*/}
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      <ul className="list-none p-0 bg-gray-800 text-white absolute">
+          <li className="py-2 px-4">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="py-2 px-4">
+            <Link to="/co2">CO2</Link>
+          </li>
+          <li className="py-2 px-4">
+            <Link to="/methane">Metano</Link>
+          </li>
+          <li className="py-2 px-4">
+            <Link to="/no2">NO2</Link>
+          </li>
+          <li className="py-2 px-4">
+            <Link to="/polarice">Ghiaccio Polare</Link>
+          </li>
+          <li className="py-2 px-4">
+            <Link to="/temperature">Temperatura</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+

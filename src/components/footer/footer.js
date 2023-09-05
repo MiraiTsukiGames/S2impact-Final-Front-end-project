@@ -2,8 +2,10 @@ import React from 'react'
 
 export default function footer() {
   return (
-    <div className="text-center b-0">
-      Copyright@2023 Samanta Mancini
+    <footer className="relative flex justify-center overflow-y-hidden">
+    <div className="clear-both bottom-0">
+    <p className="text-center">Copyright&copy; 2023 Samanta Mancini</p>
     </div>
+    </footer>
   )
 }

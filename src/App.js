@@ -18,24 +18,20 @@ const { contextTheme, setContextTheme } = useThemeContext();
 
 const getGradientClasses = () => {
   if (contextTheme === "Light") {
-    return "bg-gradient-to-b from-yellow-300 via-darkorange-700 to-orange-500";
+    return "bg-gradient-to-b from-yellow-300 via-darkorange-700 to-orange-500 text-black";
   } else {
-    return "bg-gradient-to-b from-slate-950 via-slate-800 to-cyan-800";
+    return "bg-gradient-to-b from-slate-950 via-slate-800 to-cyan-800 text-white";
   }
 };
 
   return (
-    <div className={`${getGradientClasses()} text-white mx-auto`}>
-      <header>
-      <div className="mx-8 flex justify-between">
-      <div className="flex">
-      <button className="cursor-pointer ml-auto" onClick={() => setContextTheme(contextTheme === "Light" ? "Dark" : "Light")}>
-      {contextTheme === "Light" ? <RiSunLine size={32} /> : <RiMoonLine size={32} />}</button>
-      </div>
+    <div className={`${getGradientClasses()}`}>
+    <div className="grid grid-rows-[auto,1fr,auto] min-h-screen">
       <Navbar />
-      </div>
-      </header>
-      <main className="flex items-center justify-center h-screen">
+      <span className="mx-4 top-4 left-9 absolute">{contextTheme} Mode</span>
+      <button className="cursor-pointer ml-auto absolute top-4 left-3" onClick={() => setContextTheme(contextTheme === "Light" ? "Dark" : "Light")}>
+      {contextTheme === "Light" ? <RiSunLine size={32} /> : <RiMoonLine size={32} />}</button>
+      <main className="flex items-center justify-center">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/co2" element={<CO2 />} />
@@ -46,6 +42,7 @@ const getGradientClasses = () => {
       </Routes>
       </main>
       <Footer />
+      </div>
     </div>
   );
 }
