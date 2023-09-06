@@ -12,7 +12,7 @@ const CO2 = () => {
         <title>CO2</title>
         <meta name="description" content="dioxide carbon data" />
       </Helmet>
-      <Title text={"CO2 Data"}/>
+      <Title text={"Dioxide Carbon Data"}/>
       <Chart />
       <ClientAPI />
     </section>
