@@ -1,12 +1,23 @@
-import React from 'react'
+import React from 'react';
+import Title from '../../components/title/Title';
+import { Helmet } from 'react-helmet';
+import Chart from '../../components/chart/Chart';
+import ClientAPI from '../../components/api/ClientAPI';
 
-const C02 = () => {
+const CO2 = () => {
+  
   return (
-    <div>
-      
-    </div>
+    <section>
+      <Helmet>
+        <title>CO2</title>
+        <meta name="description" content="dioxide carbon data" />
+      </Helmet>
+      <Title text={"CO2 Data"}/>
+      <Chart />
+      <ClientAPI />
+    </section>
   )
 }
 
-export default C02
+export default CO2
 

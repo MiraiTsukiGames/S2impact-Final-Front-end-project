@@ -1,14 +1,16 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import Title from '../../components/title/Title'
 
 const Methane = () => {
   return (
-    <div>
+    <section>
       <Helmet>
         <title>Methane</title>
         <meta name="description" content="methane data" />
       </Helmet>
-    </div>
+      <Title text={"Methane Data"}/>
+    </section>
   )
 }
 

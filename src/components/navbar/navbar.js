@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({ contextTheme }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -14,7 +14,7 @@ export default function Navbar() {
     {/*hamburger button*/}
     <button
         title="hamburger-menu"
-        className="hamburger bg-gray-800 rounded-full p-2"
+        className= "hamburger bg-purple-900 rounded-full p-2"
         onClick={() => toggleNavbar(!isOpen)}
       >
         <svg
@@ -32,7 +32,7 @@ export default function Navbar() {
       </button>
       {/*sidebar menu*/}
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
-      <ul className="list-none p-0 bg-gray-800 text-white absolute">
+      <ul className= {`${contextTheme} list-none p-0` }>
           <li className="py-2 px-4">
             <Link to="/">Home</Link>
           </li>
