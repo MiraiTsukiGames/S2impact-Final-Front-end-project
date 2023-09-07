@@ -1,7 +1,7 @@
-import React from 'react'
-import {Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement } from "chart.js"
-import { Line } from 'react-chartjs-2'
-import useFetchData from '../api/ClientAPI'
+import React from 'react';
+import {Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement } from "chart.js";
+import { Line } from 'react-chartjs-2';
+import useFetchData from '../api/ClientAPI';
 
 ChartJS.register(
     CategoryScale,
@@ -10,15 +10,14 @@ ChartJS.register(
     LineElement
 )
 
+const URL = "https://global-warming.org/api/co2-api";
 
 function Chart() {
-  const url = "https://global-warming.org/api/co2-api"
-  const { data, error } = useFetchData(url);
+  const { data, error } = useFetchData(URL);
   
-
-  const co2Time = data?.co2?.map(item => item.year);
-  const trend = data?.co2?.map(item => item.trend);
-  const cycle = data?.co2?.map(item => item.cycle);
+  let co2Time = data?.co2?.map((item) => `${item.year}/${item.month}/${item.day}`);
+  let trend = data?.co2?.map((item) => item.trend);
+  let cycle = data?.co2?.map((item) => item.cycle);
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -28,36 +27,40 @@ function Chart() {
     return <div>Loading...</div>;
   }
 
- 
-
-    const chartData = {
+      const chartData = {
         labels: co2Time,
         datasets: [
           {
           label: "trend",
           data: trend,
           borderColor: 'rgb(75,192,192)',
+          cubicInterpolationMode: 'monotone',
           fill: false,
-          tension: 0.1
           },
           {
             label: "cycle",
             data: cycle,
             borderColor: 'rgb(192, 75, 75)',
             fill: false,
-            tension: 0.1
             }
       ]
       
     }
-    
-    
+    const options = {
+      plugins: {
+        legend: {
+          display: true,
+        },
+      },
+    };
+  
   return (
     <div>
       <Line
       data={chartData} 
       height={400}
       width={1000}
+      options={options}
       />
     </div>
   )
