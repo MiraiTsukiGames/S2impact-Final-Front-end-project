@@ -14,7 +14,6 @@ const CO2 = () => {
       </Helmet>
       <Title text={"Co2"}/>
       <Chart />
-      <p></p>
     </section>
   )
 }

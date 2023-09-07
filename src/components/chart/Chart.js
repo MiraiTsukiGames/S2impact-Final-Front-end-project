@@ -1,32 +1,35 @@
 import React from 'react';
-import {Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement } from "chart.js";
+import {Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Legend, Tooltip } from "chart.js";
 import { Line } from 'react-chartjs-2';
 import useFetchData from '../api/ClientAPI';
+import Loading from '../loading/loading';
+import Error from '../error/error';
 
 ChartJS.register(
     CategoryScale,
     LinearScale,
     PointElement,
-    LineElement
+    LineElement,
+    Legend,
+    Tooltip
 )
 
 const URL = "https://global-warming.org/api/co2-api";
 
 function Chart() {
-  const { data, error } = useFetchData(URL);
+  const { data, error, loading } = useFetchData(URL);
   
   let co2Time = data?.co2?.map((item) => `${item.year}/${item.month}/${item.day}`);
   let trend = data?.co2?.map((item) => item.trend);
   let cycle = data?.co2?.map((item) => item.cycle);
 
+  if (loading) {
+    return <Loading />;
+  }
+
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <Error error={error} />;
   }
-
-  if (!data) {
-    return <div>Loading...</div>;
-  }
-
       const chartData = {
         labels: co2Time,
         datasets: [
@@ -34,35 +37,39 @@ function Chart() {
           label: "trend",
           data: trend,
           borderColor: 'rgb(75,192,192)',
-          cubicInterpolationMode: 'monotone',
-          fill: false,
+          backgroundColor: 'aqua',
+          pointBorderColor: 'purple',
+          fill: true,
+          tension: 0.4
           },
           {
             label: "cycle",
             data: cycle,
             borderColor: 'rgb(192, 75, 75)',
-            fill: false,
+            backgroundColor: 'red',
+            pointBorderColor: 'orange',
+            fill: true,
+            tension: 0.4
             }
       ]
       
     }
     const options = {
       plugins: {
-        legend: {
-          display: true,
-        },
+        legend: true,
       },
     };
   
   return (
-    <div>
+    <>
       <Line
       data={chartData} 
       height={400}
       width={1000}
       options={options}
       />
-    </div>
+      <p>CO2 è un pericoloso gas</p>
+    </>
   )
 }
 
