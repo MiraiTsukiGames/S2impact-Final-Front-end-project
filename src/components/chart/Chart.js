@@ -1,46 +1,63 @@
 import React from 'react'
-import {Chart as ChartJS, BarElement, CategoryScale, LinearScale} from "chart.js"
-import { Bar } from 'react-chartjs-2'
+import {Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement } from "chart.js"
+import { Line } from 'react-chartjs-2'
+import useFetchData from '../api/ClientAPI'
 
 ChartJS.register(
     CategoryScale,
     LinearScale,
-    BarElement
+    PointElement,
+    LineElement
 )
 
 
 function Chart() {
-    const data = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: 'My First Dataset',
-          data: [65, 59, 80, 81, 56, 55, 40],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(201, 203, 207, 0.2)'
-          ],
-          borderColor: [
-            'rgb(255, 99, 132)',
-            'rgb(255, 159, 64)',
-            'rgb(255, 205, 86)',
-            'rgb(75, 192, 192)',
-            'rgb(54, 162, 235)',
-            'rgb(153, 102, 255)',
-            'rgb(201, 203, 207)'
-          ],
-          borderWidth: 1
-        }]
+  const url = "https://global-warming.org/api/co2-api"
+  const { data, error } = useFetchData(url);
+  
+
+  const co2Time = data?.co2?.map(item => item.year);
+  const trend = data?.co2?.map(item => item.trend);
+  const cycle = data?.co2?.map(item => item.cycle);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
+ 
+
+    const chartData = {
+        labels: co2Time,
+        datasets: [
+          {
+          label: "trend",
+          data: trend,
+          borderColor: 'rgb(75,192,192)',
+          fill: false,
+          tension: 0.1
+          },
+          {
+            label: "cycle",
+            data: cycle,
+            borderColor: 'rgb(192, 75, 75)',
+            fill: false,
+            tension: 0.1
+            }
+      ]
+      
     }
+    
+    
   return (
     <div>
-      <Bar
-      data={data} 
-        height={400}
+      <Line
+      data={chartData} 
+      height={400}
+      width={1000}
       />
     </div>
   )

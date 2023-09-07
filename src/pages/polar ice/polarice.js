@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Title from '../../components/title/Title'
+import ClientAPI from '../../components/api/ClientAPI'
 
 const Polarice = () => {
   return (
@@ -10,6 +11,7 @@ const Polarice = () => {
         <meta name="description" content="polar ice data" />
       </Helmet>
       <Title text={"Polar ice Data"} />
+      <ClientAPI url={" https://global-warming.org/api/arctic-api"}/>
     </section>
   )
 }

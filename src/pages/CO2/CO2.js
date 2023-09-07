@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../../components/title/Title';
 import { Helmet } from 'react-helmet';
 import Chart from '../../components/chart/Chart';
-import ClientAPI from '../../components/api/ClientAPI';
+
 
 const CO2 = () => {
   
@@ -10,11 +10,10 @@ const CO2 = () => {
     <section>
       <Helmet>
         <title>CO2</title>
-        <meta name="description" content="dioxide carbon data" />
+        <meta name="description" content="carbon dioxide data" />
       </Helmet>
-      <Title text={"Dioxide Carbon Data"}/>
+      <Title text={"Carbon Dioxide Data"}/>
       <Chart />
-      <ClientAPI />
     </section>
   )
 }

@@ -1,22 +1,22 @@
-import React, {useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
-function ClientAPI( { url }) {
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                let response = await axios.get(url);
-            } catch (error) {
-                console.error(error)
-            }
-        }
-        fetchData();
-    }, [url])
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const useFetchData = (url) => {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
 
-export default ClientAPI;
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(url);
+        setData(response.data);
+      } catch (error) {
+        setError(error);
+      }
+    };
+    fetchData();
+
+  return { data, error };
+};
+
+export default useFetchData;
