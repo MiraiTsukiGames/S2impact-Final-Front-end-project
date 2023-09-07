@@ -36,18 +36,14 @@ function Chart() {
           {
           label: "trend",
           data: trend,
-          borderColor: 'rgb(75,192,192)',
-          backgroundColor: 'aqua',
-          pointBorderColor: 'purple',
+          backgroundColor: 'orange',
           fill: true,
           tension: 0.4
           },
           {
             label: "cycle",
             data: cycle,
-            borderColor: 'rgb(192, 75, 75)',
             backgroundColor: 'red',
-            pointBorderColor: 'orange',
             fill: true,
             tension: 0.4
             }
@@ -59,6 +55,7 @@ function Chart() {
         legend: true,
       },
     };
+    
   
   return (
     <>
