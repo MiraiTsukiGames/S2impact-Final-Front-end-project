@@ -10,11 +10,6 @@ const navigate = useNavigate();
 
   return (
     <section>
-      <Helmet>
-    <meta charSet="utf-8" />
-    <title>Polar ice</title>
-    <link rel="canonical" href="http://globalwarming.app" />
-            </Helmet>
       <Title text={"Polar ice"} />
       <PolarIceChart />
       <Button text={"Home"} onClick={() => navigate("/")}/>

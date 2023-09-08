@@ -9,11 +9,6 @@ const Home = () => {
 
   return (
     <section>
-      <Helmet>
-    <meta charSet="utf-8" />
-    <title>Global warming</title>
-    <link rel="canonical" href="http://globalwarming.app" />
-            </Helmet>
       <Title text={"Global warming"}/>
       <p className="text-left p-4 text-lg">Welcome to the Global Warming Data Recording App. <br></br>
       Explore graphs and statistics to understand the impact of Global Warming over time. <br></br>
