@@ -10,7 +10,7 @@ const Methane = () => {
         <title>Methane</title>
         <meta name="description" content="methane data" />
       </Helmet>
-      <Title text={"Methane Data"}/>
+      <Title text={"Methane"}/>
       <MethaneChart />
     </section>
   )
