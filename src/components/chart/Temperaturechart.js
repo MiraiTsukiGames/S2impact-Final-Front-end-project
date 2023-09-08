@@ -34,14 +34,14 @@ function TemperatureChart() {
         labels: temperatureTime,
         datasets: [
           {
-          label: "station",
+          label: "Station",
           data: station,
           backgroundColor: 'purple',
           fill: true,
           tension: 0.4
           },
           {
-            label: "land",
+            label: "Land",
             data: land,
             backgroundColor: 'aqua',
             fill: true,
