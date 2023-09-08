@@ -38,14 +38,14 @@ function MethaneChart() {
           label: "average",
           data: average,
           backgroundColor: 'gold',
-          fill: true,
+          fill: false,
           tension: 0.4
           },
           {
             label: "trend",
             data: trend,
             backgroundColor: 'silver',
-            fill: true,
+            fill: false,
             tension: 0.4
             },
       ]
@@ -54,6 +54,21 @@ function MethaneChart() {
     const options = {
       plugins: {
         legend: true,
+      },
+      tooltips: {
+        titleFont: {
+          size: 14,
+          weight: 'bold'
+        },
+        bodyFont: {
+          size: 12
+        },
+        
+        callbacks: {
+          label: function(tooltipItem) {
+            return tooltipItem.value + ' units';
+          }
+        }
       }
   };
     

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import Title from '../../components/title/Title'
 import TemperatureChart from '../../components/chart/Temperaturechart'
 import Button from '../../components/button/Button';
@@ -9,15 +9,19 @@ const Temperature = () => {
 const navigate = useNavigate();
 
   return (
+    <HelmetProvider>
     <section>
+    
       <Helmet>
         <title>Temperature</title>
         <meta name="description" content="temperature data" />
       </Helmet>
+      
       <Title text={"Temperature"} />
       <TemperatureChart />
       <Button text={"Home"} onClick={() => navigate("/")}/>
     </section>
+    </HelmetProvider>
   )
 }
 

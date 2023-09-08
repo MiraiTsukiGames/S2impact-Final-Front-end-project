@@ -19,10 +19,10 @@ const URL = "https://global-warming.org/api/arctic-api";
 function PolarIceChart() {
   const { data, error, loading } = useFetchData(URL);
   
-  let arcticData = data?.arcticData?.map((item) => `${item.year}/${item.month}`);
-  let extent = data?.arcticData?.map((item) => item.extent);
-  let area = data?.arcticData?.map((item) => item.area);
-  let rank = data?.arcticData?.map((item) => item.rank);
+  let arcticData = data?.arcticData?.map((item) => `${item.year}/${item.month}`) || [];
+  let extent = data?.arcticData?.map((item) => item.extent) || [];
+  let area = data?.arcticData?.map((item) => item.area) || [];
+  let rank = data?.arcticData?.map((item) => item.rank) || [];
 
   if (loading) {
     return <Loading />;
@@ -35,21 +35,21 @@ function PolarIceChart() {
         labels: arcticData,
         datasets: [
           {
-          label: "extent",
+          label: "Extent",
           data: extent,
           backgroundColor: 'blue',
           fill: false,
           tension: 0.4
           },
           {
-            label: "rank",
+            label: "Rank",
             data: rank,
             backgroundColor: 'cyan',
             fill: false,
             tension: 0.4
             },
             {
-              label: "area",
+              label: "Area",
               data: area,
               backgroundColor: 'grey',
               fill: false,
@@ -61,8 +61,23 @@ function PolarIceChart() {
     const options = {
       plugins: {
         legend: true,
+      },
+      tooltips: {
+        titleFont: {
+          size: 14,
+          weight: 'bold'
+        },
+        bodyFont: {
+          size: 12
+        },
+        
+        callbacks: {
+          label: function(tooltipItem) {
+            return tooltipItem.value + ' units';
+          }
+        }
       }
-  };
+    }
     
   
   return (

@@ -11,7 +11,7 @@ ChartJS.register(
     PointElement,
     LineElement,
     Legend,
-    Tooltip
+    Tooltip  
 )
 
 const URL = "https://global-warming.org/api/temperature-api";
@@ -19,9 +19,9 @@ const URL = "https://global-warming.org/api/temperature-api";
 function TemperatureChart() {
   const { data, error, loading } = useFetchData(URL);
   
-  let temperatureTime = data?.result?.map((item) => `${item.time}`);
-  let station = data?.result?.map((item) => item.station);
-  let land = data?.result?.map((item) => item.land);
+  let temperatureTime = data?.result?.map((item) => `${item.time}`) || [];
+  let station = data?.result?.map((item) => item.station) || [];
+  let land = data?.result?.map((item) => item.land) || [];
 
   if (loading) {
     return <Loading />;
@@ -37,14 +37,14 @@ function TemperatureChart() {
           label: "Station",
           data: station,
           backgroundColor: 'purple',
-          fill: true,
+          fill: false,
           tension: 0.4
           },
           {
             label: "Land",
             data: land,
             backgroundColor: 'aqua',
-            fill: true,
+            fill: false,
             tension: 0.4
             }
       ]
@@ -53,6 +53,21 @@ function TemperatureChart() {
     const options = {
       plugins: {
         legend: true,
+      },
+      tooltips: {
+        titleFont: {
+          size: 14,
+          weight: 'bold'
+        },
+        bodyFont: {
+          size: 12
+        },
+        
+        callbacks: {
+          label: function(tooltipItem) {
+            return tooltipItem.value + ' units';
+          }
+        }
       }
   };
     

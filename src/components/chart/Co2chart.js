@@ -37,14 +37,14 @@ function Chart() {
           label: "trend",
           data: trend,
           backgroundColor: 'orange',
-          fill: true,
+          fill: false,
           tension: 0.4
           },
           {
             label: "cycle",
             data: cycle,
             backgroundColor: 'red',
-            fill: true,
+            fill: false,
             tension: 0.4
             }
       ]
@@ -54,6 +54,21 @@ function Chart() {
       plugins: {
         legend: true,
       },
+      tooltips: {
+        titleFont: {
+          size: 14,
+          weight: 'bold'
+        },
+        bodyFont: {
+          size: 12
+        },
+        
+        callbacks: {
+          label: function(tooltipItem) {
+            return tooltipItem.value + ' units';
+          }
+        }
+      }
     };
     
   
@@ -61,7 +76,7 @@ function Chart() {
     <>
       <Line
       data={chartData} 
-      height={400}
+      height={500}
       width={1000}
       options={options}
       />

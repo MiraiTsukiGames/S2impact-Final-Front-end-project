@@ -11,7 +11,8 @@ ChartJS.register(
     PointElement,
     LineElement,
     Legend,
-    Tooltip
+    Tooltip,
+    
 )
 
 const URL = "https://global-warming.org/api/nitrous-oxide-api";
@@ -35,17 +36,17 @@ function No2Chart() {
         labels: no2Time,
         datasets: [
           {
-          label: "average",
+          label: "Average",
           data: average,
           backgroundColor: 'green',
-          fill: true,
+          fill: false,
           tension: 0.4
           },
           {
-            label: "trend",
+            label: "Trend",
             data: trend,
             backgroundColor: 'yellow',
-            fill: true,
+            fill: false,
             tension: 0.4
             },
       ]
@@ -54,6 +55,21 @@ function No2Chart() {
     const options = {
       plugins: {
         legend: true,
+      },
+      tooltips: {
+        titleFont: {
+          size: 14,
+          weight: 'bold'
+        },
+        bodyFont: {
+          size: 12
+        },
+        
+        callbacks: {
+          label: function(tooltipItem) {
+            return tooltipItem.value + ' units';
+          }
+        }
       }
   };
     
@@ -62,8 +78,8 @@ function No2Chart() {
     <>
       <Line
       data={chartData} 
-      height={600}
-      width={1500}
+      height={500}
+      width={1000}
       options={options}
       />
       <p>CO2 è un pericoloso gas</p>
