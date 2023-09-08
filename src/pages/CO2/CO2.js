@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from '../../components/title/Title';
 import { Helmet } from 'react-helmet';
-import Chart from '../../components/chart/Chart';
+import Co2chart from '../../components/chart/Co2chart';
 
 
 const CO2 = () => {
@@ -13,7 +13,7 @@ const CO2 = () => {
         <meta name="description" content="carbon dioxide data" />
       </Helmet>
       <Title text={"Co2"}/>
-      <Chart />
+      <Co2chart />
     </section>
   )
 }

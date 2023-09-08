@@ -2,8 +2,8 @@ import React from 'react';
 import {Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Legend, Tooltip } from "chart.js";
 import { Line } from 'react-chartjs-2';
 import useFetchData from '../api/ClientAPI';
-import Loading from '../loading/loading';
-import Error from '../error/error';
+import Loading from '../loading/Loading';
+import Error from '../error/Error';
 
 ChartJS.register(
     CategoryScale,
@@ -14,14 +14,14 @@ ChartJS.register(
     Tooltip
 )
 
-const URL = "https://global-warming.org/api/co2-api";
+const URL = "https://global-warming.org/api/temperature-api";
 
-function Chart() {
+function TemperatureChart() {
   const { data, error, loading } = useFetchData(URL);
   
-  let co2Time = data?.co2?.map((item) => `${item.year}/${item.month}/${item.day}`);
-  let trend = data?.co2?.map((item) => item.trend);
-  let cycle = data?.co2?.map((item) => item.cycle);
+  let temperatureTime = data?.result?.map((item) => `${item.time}`);
+  let station = data?.result?.map((item) => item.station);
+  let land = data?.result?.map((item) => item.land);
 
   if (loading) {
     return <Loading />;
@@ -31,19 +31,19 @@ function Chart() {
     return <Error error={error} />;
   }
       const chartData = {
-        labels: co2Time,
+        labels: temperatureTime,
         datasets: [
           {
-          label: "trend",
-          data: trend,
-          backgroundColor: 'orange',
+          label: "station",
+          data: station,
+          backgroundColor: 'purple',
           fill: true,
           tension: 0.4
           },
           {
-            label: "cycle",
-            data: cycle,
-            backgroundColor: 'red',
+            label: "land",
+            data: land,
+            backgroundColor: 'aqua',
             fill: true,
             tension: 0.4
             }
@@ -53,15 +53,15 @@ function Chart() {
     const options = {
       plugins: {
         legend: true,
-      },
-    };
+      }
+  };
     
   
   return (
     <>
       <Line
       data={chartData} 
-      height={400}
+      height={500}
       width={1000}
       options={options}
       />
@@ -70,5 +70,5 @@ function Chart() {
   )
 }
 
-export default Chart
+export default TemperatureChart
 
