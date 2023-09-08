@@ -11,9 +11,10 @@ const navigate = useNavigate();
   return (
     <section>
       <Helmet>
-        <title>NO2</title>
-        <meta name="description" content="nitrous oxide data" />
-      </Helmet>
+    <meta charSet="utf-8" />
+    <title>NO2</title>
+    <link rel="canonical" href="http://globalwarming.app" />
+            </Helmet>
       <Title text={"NO2 Data"} />
       <No2Chart />
       <Button text={"Home"} onClick={() => navigate("/")}/>
