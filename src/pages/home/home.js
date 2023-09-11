@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import { Helmet } from 'react-helmet'
 import Title from '../../components/title/Title'
 import ButtonAnimation from '../../components/button/ButtonAnimation'
 import styles from './Home.module.css';

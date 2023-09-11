@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+//import React, { useState } from 'react';
+//import { Link } from 'react-router-dom';
 
 /*export default function Navbar({ contextTheme }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
   /*return (
     /*navbar section*/
    // <nav className='flex justify-end items-center'>
-    {/*hamburger button*/}
+    //{/*hamburger button*/}
    /* <button
         title="hamburger-menu"
         className= "hamburger bg-purple-900 rounded-full p-2"

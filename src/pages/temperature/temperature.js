@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Title from '../../components/title/Title'
 import TemperatureChart from '../../components/chart/Temperaturechart'
 import Button from '../../components/button/Button';
