@@ -1,68 +1,37 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Helmet } from 'react-helmet'
 import Title from '../../components/title/Title'
-import Button from '../../components/button/Button'
-import { useNavigate } from 'react-router-dom'
+import ButtonAnimation from '../../components/button/ButtonAnimation'
+import styles from './Home.module.css';
+import Cards from '../../components/cards/Cards';
+
 
 const Home = () => {
-  const navigate = useNavigate();
+  const Ref = useRef(null);
+  const handleClick = () => {
+    Ref.current?.scrollIntoView({ behavior: 'smooth' });
+  }
 
   return (
     <section>
-      <Title text={"Global warming"}/>
-      <p className="text-left p-4 text-lg">Welcome to the Global Warming Data Recording App. <br></br>
-      Explore graphs and statistics to understand the impact of Global Warming over time. <br></br>
-      Contribute to the collection of valuable information for scientific research and informed decision-making.<br></br>
-      Join our community of conscious citizens and help preserve our planet for future generations. </p>
-      <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <div className="px-6 py-4">
-        <h2 className="font-bold text-xl mb-2">CO2 graph</h2>
-        <p className="text-base">
-          Dati sul diossido di carbonio(CO2) presente nell'aria dagli anni passati all'anno presente.
-        </p>
+    <div className={styles.banner}>
+    <div className={`${styles.home} home container mx-auto px-4 py-8 overflow-hidden`}>
+      <Title text={"Welcome to Climate Change Alert "}/>
+      <p className="text-left p-4 text-base md:text-lg">
+      Global warming is a phenomenon in which the average temperature of the Earth gradually increases due to the excessive presence of greenhouse gases in the atmosphere. <br />
+      These gases, such as carbon dioxide (CO2) and methane (CH4), trap heat from the sun, leading to a rise in global temperatures.<br />
+      The consequences of global warming are manifold and include the rise in sea levels, the increase in global temperatures, <br />
+      the acidification of oceans, the alteration of climate patterns, the increase in frequency and intensity of extreme weather events, and the acceleration of biodiversity loss.
+      <br />Here you will find a vast collection of data and information regarding global warming.<br />
+        Explore the graphs, statistics, and latest scientific studies to understand the magnitude and impact of this phenomenon on our planet. <br />
+        We are committed to raising awareness about global warming and highlighting the urgency of taking concrete actions to address this challenge.
+      </p>
       </div>
-      <div className="px-6 py-4">
-        <Button text={"Load graph"} onClick={() => navigate("co2")}/>
-      </div>
-      <div className="px-6 py-4">
-        <h2 className="font-bold text-xl mb-2">Methane graph</h2>
-        <p className="text-base">
-        Dati sul metano presente nell'aria dagli anni passati all'anno presente.
-        </p>
-      </div>
-      <div className="px-6 py-4">
-        <Button text={"Load graph"} onClick={() => navigate("methane")}/>
-      </div>
-      <div className="px-6 py-4">
-        <h2 className="font-bold text-xl mb-2">NO2 graph</h2>
-        <p className="text-base">
-        Dati sull'azoto(NO2) presente nell'aria dagli anni passati all'anno presente.
-        </p>
-      </div>
-      <div className="px-6 py-4">
-        <Button text={"Load graph"} onClick={() => navigate("no2")}/>
-      </div>
-      <div className="px-6 py-4">
-        <h2 className="font-bold text-xl mb-2">Polar Ice graph</h2>
-        <p className="text-base">
-        Dati sullo scioglimento dei ghiacciai dagli anni passati all'anno presente.
-        </p>
-      </div>
-      <div className="px-6 py-4">
-        <Button text={"Load graph"} onClick={() => navigate("polarice")}/>
-      </div>
-      <div className="px-6 py-4">
-        <h2 className="font-bold text-xl mb-2">Temperature graph</h2>
-        <p className="text-base">
-          Dati sulle temperature terrestri dagli anni passati all'anno presente.
-        </p>
-      </div>
-      <div className="px-6 py-4">
-        <Button text={"Load graph"} onClick={() => navigate("temperature")}/>
-      </div>
+    <ButtonAnimation onClick={handleClick}/>
     </div>
-    </section>
-    
+    <Cards scroll={Ref}/>
+      </section>
+      
   )
 }
 

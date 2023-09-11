@@ -3,9 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-
+span {
+  margin: 0;
+  padding: 0;
+  right: 50px;
+}
 @layer base { 
     html { 
       font-family: 'Montserrat', sans-serif; 

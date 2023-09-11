@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Navbar({ contextTheme }) {
+/*export default function Navbar({ contextTheme }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
-  return (
+  /*return (
     /*navbar section*/
-    <nav className='flex justify-end items-center'>
+   // <nav className='flex justify-end items-center'>
     {/*hamburger button*/}
-    <button
+   /* <button
         title="hamburger-menu"
         className= "hamburger bg-purple-900 rounded-full p-2"
         onClick={() => toggleNavbar(!isOpen)}
@@ -30,8 +30,7 @@ export default function Navbar({ contextTheme }) {
           />
         </svg>
       </button>
-      {/*sidebar menu*/}
-      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      /*<div className={`sidebar ${isOpen ? "open" : ""}`}>
       <ul className= {`${contextTheme} list-none p-0` }>
           <li className="py-2 px-4">
             <Link to="/">Home</Link>
@@ -56,4 +55,5 @@ export default function Navbar({ contextTheme }) {
     </nav>
   );
 };
+*/
 
