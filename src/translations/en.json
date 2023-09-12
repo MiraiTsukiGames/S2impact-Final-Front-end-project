@@ -1,0 +1,16 @@
+{
+    "home": {
+      "title": "Welcome to Climate Change Alert",
+      "description": "Global warming is a phenomenon in which the average temperature of the Earth gradually increases due to the excessive presence of greenhouse gases in the atmosphere. These gases, such as carbon dioxide (CO2) and methane (CH4), trap heat from the sun, leading to a rise in global temperatures. The consequences of global warming are manifold and include the rise in sea levels, the increase in global temperatures, the acidification of oceans, the alteration of climate patterns, the increase in frequency and intensity of extreme weather events, and the acceleration of biodiversity loss. Here you will find a vast collection of data and information regarding global warming. Explore the graphs, statistics, and latest scientific studies to understand the magnitude and impact of this phenomenon on our planet. We are committed to raising awareness about global warming and highlighting the urgency of taking concrete actions to address this challenge."
+    },
+    "co2": {
+      "description": "This is the about page."
+    },
+    "contact": {
+      "title": "Contact",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    }
+  }

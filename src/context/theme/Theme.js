@@ -23,5 +23,3 @@ export const useThemeContext = () => {
   const context = useContext(ThemeContext);
   return context;
 };
-
-

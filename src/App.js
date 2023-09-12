@@ -1,7 +1,7 @@
-import React from "react";
-import { useThemeContext } from "./context/Theme";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { RiSunLine, RiMoonLine } from "react-icons/ri";
+import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { useThemeContext } from "./context/theme/Theme";
 import Footer from "./components/footer/Footer";
 /*import Navbar from "./components/navbar/Navbar";*/
 import Home from "./pages/home/Home";
@@ -11,24 +11,54 @@ import NO2 from "./pages/NO2/NO2";
 import PolarIce from "./pages/polar ice/Polarice";
 import Temperature from "./pages/temperature/Temperature";
 import './App.css';
+import { useLanguageContext } from './context/language/Language';
 
-function App() {
-  // Get the current theme from the context
-const { contextTheme, setContextTheme } = useThemeContext();
 
-const getBackgroundClasses = () => {
-  if (contextTheme === "Light") {
-    return "bg-white-800 text-blue-900";
-  } else {
-    return "bg-gray-800 text-white";
-  }
-};
+
+
+const App = () => {
+    // Get the current theme from the context
+    const { contextTheme, setContextTheme } = useThemeContext();
+    // State for the switch value
+    const [checked, setChecked] = useState(false);
+
+    const { setLanguage, language, changeLanguage } = useLanguageContext();
+  
+    // Handler for the switch change event
+    const handleSwitch = () => {
+      // Change the theme in the context
+      setContextTheme((prevTheme) => (prevTheme === "Dark" ? "Light" : "Dark"));
+      // Update the switch value
+      setChecked(!checked);
+    };
+
+    const handleLanguageChange = () => {
+      setLanguage((prevLanguage) => (prevLanguage === "en" ? "it" : "en"));
+      if (language === "it") {
+        changeLanguage("en")
+      } else {
+        changeLanguage("it")
+      }
+    };
 
   return (
-    <div className={`${getBackgroundClasses()}`}>
-      <span>{contextTheme} Mode</span>
-      <button className="cursor-pointer absolute right-6" onClick={() => setContextTheme(contextTheme === "Light" ? "Dark" : "Light")}>
-      {contextTheme === "Light" ? <RiSunLine size={32} /> : <RiMoonLine size={32} />}</button>
+    
+    <div className="App" id={contextTheme}>
+    <input
+          type="checkbox"
+          className="checkbox"
+          id="checkbox"
+          // onChange prop to fire our internal function for changing the light mode value
+          onChange={handleSwitch}
+          // checking checked prop 
+          checked={checked} 
+        />
+      <label htmlFor="checkbox" className="label">
+        <BsMoonStarsFill color="white" size={12}/>
+        <BsFillSunFill color="yellow" size={12}/>
+        <div className="ball"></div>
+      </label>
+      <button onClick={handleLanguageChange}>{language}</button>
       <main className="flex items-center justify-center">
       <Routes>
         <Route path="/" element={<Home />} />
@@ -38,8 +68,8 @@ const getBackgroundClasses = () => {
         <Route path="/polarice" element={<PolarIce />} />
         <Route path="/temperature" element={<Temperature />} />
       </Routes>
-      </main>
       <Footer />
+      </main>
       </div>
   );
 }
