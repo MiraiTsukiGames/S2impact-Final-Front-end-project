@@ -11,7 +11,7 @@ import NO2 from "./pages/NO2/NO2";
 import PolarIce from "./pages/polar ice/Polarice";
 import Temperature from "./pages/temperature/Temperature";
 import './App.css';
-import { useLanguageContext } from './context/language/Language';
+
 
 
 
@@ -21,8 +21,6 @@ const App = () => {
     const { contextTheme, setContextTheme } = useThemeContext();
     // State for the switch value
     const [checked, setChecked] = useState(false);
-
-    const { setLanguage, language, changeLanguage } = useLanguageContext();
   
     // Handler for the switch change event
     const handleSwitch = () => {
@@ -30,15 +28,6 @@ const App = () => {
       setContextTheme((prevTheme) => (prevTheme === "Dark" ? "Light" : "Dark"));
       // Update the switch value
       setChecked(!checked);
-    };
-
-    const handleLanguageChange = () => {
-      setLanguage((prevLanguage) => (prevLanguage === "en" ? "it" : "en"));
-      if (language === "it") {
-        changeLanguage("en")
-      } else {
-        changeLanguage("it")
-      }
     };
 
   return (
@@ -58,7 +47,7 @@ const App = () => {
         <BsFillSunFill color="yellow" size={12}/>
         <div className="ball"></div>
       </label>
-      <button onClick={handleLanguageChange}>{language}</button>
+      <button >Translate</button>
       <main className="flex items-center justify-center">
       <Routes>
         <Route path="/" element={<Home />} />
