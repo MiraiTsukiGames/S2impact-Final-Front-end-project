@@ -82,7 +82,6 @@ function No2Chart() {
       width={1000}
       options={options}
       />
-      <p>CO2 è un pericoloso gas</p>
     </>
   )
 }

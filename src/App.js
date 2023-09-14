@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { useThemeContext } from "./context/theme/Theme";
 import Footer from "./components/footer/Footer";
-/*import Navbar from "./components/navbar/Navbar";*/
+import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import CO2 from "./pages/CO2/CO2";
 import Methane from "./pages/methane/Methane";
@@ -11,9 +11,6 @@ import NO2 from "./pages/NO2/NO2";
 import PolarIce from "./pages/polar ice/Polarice";
 import Temperature from "./pages/temperature/Temperature";
 import './App.css';
-
-
-
 
 
 const App = () => {
@@ -30,9 +27,12 @@ const App = () => {
       setChecked(!checked);
     };
 
+
+
   return (
     
     <div className="App" id={contextTheme}>
+    <Navbar />
     <input
           type="checkbox"
           className="checkbox"
@@ -47,7 +47,6 @@ const App = () => {
         <BsFillSunFill color="yellow" size={12}/>
         <div className="ball"></div>
       </label>
-      <button >Translate</button>
       <main className="flex items-center justify-center">
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,18 +1,25 @@
-//import React, { useState } from 'react';
-//import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Button from '../button/Button';
+import { changeLanguage } from "i18next";
+import { useTranslation } from 'react-i18next';
 
-/*export default function Navbar({ contextTheme }) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
-  /*return (
-    /*navbar section*/
-   // <nav className='flex justify-end items-center'>
-    //{/*hamburger button*/}
-   /* <button
+  return (
+    //navbar section
+    <nav className='flex justify-end items-center'>
+    <p></p>
+     <Button text={"Italiano"} onClick={() => changeLanguage('it')}/>
+     <Button text={"English"} onClick={() => changeLanguage('en')}/>
+    {/*hamburger button*/}
+    <button
         title="hamburger-menu"
         className= "hamburger bg-purple-900 rounded-full p-2"
         onClick={() => toggleNavbar(!isOpen)}
@@ -30,8 +37,8 @@
           />
         </svg>
       </button>
-      /*<div className={`sidebar ${isOpen ? "open" : ""}`}>
-      <ul className= {`${contextTheme} list-none p-0` }>
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      <ul className= {`list-none p-0` }>
           <li className="py-2 px-4">
             <Link to="/">Home</Link>
           </li>
@@ -39,21 +46,21 @@
             <Link to="/co2">CO2</Link>
           </li>
           <li className="py-2 px-4">
-            <Link to="/methane">Metano</Link>
+            <Link to="/methane">{t("methane")}</Link>
           </li>
           <li className="py-2 px-4">
             <Link to="/no2">NO2</Link>
           </li>
           <li className="py-2 px-4">
-            <Link to="/polarice">Ghiaccio Polare</Link>
+            <Link to="/polarice">{t("polarice")}</Link>
           </li>
           <li className="py-2 px-4">
-            <Link to="/temperature">Temperatura</Link>
+            <Link to="/temperature">Temperature</Link>
           </li>
         </ul>
       </div>
     </nav>
   );
 };
-*/
+
 
