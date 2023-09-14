@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Button from '../button/Button';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Button from "../button/Button";
 import { changeLanguage } from "i18next";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,14 +14,14 @@ export default function Navbar() {
 
   return (
     //navbar section
-    <nav className='flex justify-end items-center'>
-    <p></p>
-     <Button text={"Italiano"} onClick={() => changeLanguage('it')}/>
-     <Button text={"English"} onClick={() => changeLanguage('en')}/>
-    {/*hamburger button*/}
-    <button
+    <nav className="flex justify-end items-center">
+      <p></p>
+      <Button text={"Italiano"} onClick={() => changeLanguage("it")} />
+      <Button text={"English"} onClick={() => changeLanguage("en")} />
+      {/*hamburger button*/}
+      <button
         title="hamburger-menu"
-        className= "hamburger bg-purple-900 rounded-full p-2"
+        className="hamburger bg-purple-900 rounded-full p-2"
         onClick={() => toggleNavbar(!isOpen)}
       >
         <svg
@@ -38,7 +38,7 @@ export default function Navbar() {
         </svg>
       </button>
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
-      <ul className= {`list-none p-0` }>
+        <ul className={`list-none p-0`}>
           <li className="py-2 px-4">
             <Link to="/">Home</Link>
           </li>
@@ -61,6 +61,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-};
-
-
+}

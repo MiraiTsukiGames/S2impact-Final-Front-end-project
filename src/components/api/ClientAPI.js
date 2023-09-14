@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const useFetchData = (URL) => {
   const [data, setData] = useState([]);
@@ -15,12 +15,12 @@ const useFetchData = (URL) => {
         setLoading(false);
       } catch (error) {
         setError(error);
-        setLoading(false)
+        setLoading(false);
       }
     };
     fetchData();
   }, [URL]);
-  
+
   return { data, error, loading };
 };
 
