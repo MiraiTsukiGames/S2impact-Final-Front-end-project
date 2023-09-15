@@ -1,5 +1,5 @@
 import React from "react";
-import PolarIceChart from "../../components/chart/Polaricechart";
+import PolarIceChart from "../../components/chart/Polaricechart/Polaricechart";
 import Button from "../../components/button/Button";
 import { useNavigate } from "react-router-dom";
 import Hero from "../../components/hero/Hero";
