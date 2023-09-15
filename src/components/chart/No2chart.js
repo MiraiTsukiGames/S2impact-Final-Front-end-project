@@ -43,7 +43,7 @@ function No2Chart() {
       {
         label: "Trend",
         data: trend,
-        backgroundColor: "violet",
+        backgroundColor: "purple",
         fill: false,
         tension: 0.4,
       },
