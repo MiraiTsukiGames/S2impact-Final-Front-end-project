@@ -43,7 +43,7 @@ const App = () => {
         <BsFillSunFill color="yellow" size={12} />
         <div className="ball"></div>
       </label>
-      <main className="flex items-center justify-center">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/co2" element={<CO2 />} />

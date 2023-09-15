@@ -6,6 +6,7 @@
   overflow-x: hidden;
   font-family: "Montserrat";
   font-size: 1.2rem;
+  text-decoration: none;
 }
 
 #Dark {
@@ -69,4 +70,20 @@
   opacity: 70%;
   border-radius: 5px;
   border-radius: 5px;
+}
+
+#Dark a {
+  color: white;
+}
+
+#Light a {
+  color: #011d36;
+}
+
+#Light .sidebar {
+  background-color: white;
+}
+
+#Dark .sidebar {
+  background-color: #292c35;
 }
