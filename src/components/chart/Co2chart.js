@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import useFetchData from "../api/ClientAPI";
+import style from './Co2.module.css';
 
 ChartJS.register(
   CategoryScale,
@@ -23,7 +24,7 @@ ChartJS.register(
 const URL = "https://global-warming.org/api/co2-api";
 
 function Chart() {
-  const { data } = useFetchData(URL);
+  const { data, isLoading } = useFetchData(URL);
 
   let co2Time = data?.co2?.map(
     (item) => `${item.year}/${item.month}/${item.day}`,
@@ -37,22 +38,32 @@ function Chart() {
       {
         label: "trend",
         data: trend,
-        backgroundColor: "orange",
+        backgroundColor: "#B8860B",
         fill: false,
-        tension: 0.4,
+        tension: 0.4
       },
       {
         label: "cycle",
         data: cycle,
-        backgroundColor: "red",
+        backgroundColor: "brown",
         fill: false,
-        tension: 0.4,
+        tension: 0.4
       },
     ],
   };
   const options = {
     plugins: {
       legend: true,
+    },
+    animation: {
+      duration: 0
+    },
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        beginAtZero: true
+      }
     },
     tooltips: {
       titleFont: {
@@ -73,7 +84,14 @@ function Chart() {
 
   return (
     <>
-      <Line data={chartData} height={500} width={1000} options={options} />
+    {isLoading ? (
+      <p>Loading...</p>
+    ) : (
+      chartData &&
+      <div className={style.backgroundChart}>
+      <Line data={chartData} options={options} />
+    </div>
+    )}
     </>
   );
 }

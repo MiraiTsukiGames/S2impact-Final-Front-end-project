@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import useFetchData from "../api/ClientAPI";
+import style from './Temperature.module.css';
 
 ChartJS.register(
   CategoryScale,
@@ -23,7 +24,7 @@ ChartJS.register(
 const URL = "https://global-warming.org/api/temperature-api";
 
 function TemperatureChart() {
-  const { data } = useFetchData(URL);
+  const { data, isLoading } = useFetchData(URL);
 
   let temperatureTime = data?.result?.map((item) => `${item.time}`);
   let station = data?.result?.map((item) => item.station);
@@ -35,14 +36,14 @@ function TemperatureChart() {
       {
         label: "Station",
         data: station,
-        backgroundColor: "purple",
+        backgroundColor: "red",
         fill: false,
         tension: 0.4,
       },
       {
         label: "Land",
         data: land,
-        backgroundColor: "aqua",
+        backgroundColor: "orange",
         fill: false,
         tension: 0.4,
       },
@@ -52,6 +53,16 @@ function TemperatureChart() {
     plugins: {
       legend: true,
     },
+    animation: {
+      duration: 0
+    },
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        beginAtZero: true
+      }
+  },
     tooltips: {
       titleFont: {
         size: 14,
@@ -71,7 +82,14 @@ function TemperatureChart() {
 
   return (
     <>
-      <Line data={chartData} height={500} width={1000} options={options} />
+    {isLoading ? (
+      <p>Loading...</p>
+    ) : (
+      chartData &&
+    <div className={style.backgroundChart}>
+      <Line data={chartData} options={options} />
+    </div>
+    )}
     </>
   );
 }

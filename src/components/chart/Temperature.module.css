@@ -1,0 +1,30 @@
+.backgroundChart {
+    border-radius: 50px;
+    box-shadow: 1px 2px 1px 2px rgb(129, 129, 129);
+    margin: auto;
+    padding: 20px;
+    height: 50vh; 
+    width: 80%;  
+}
+
+@media only screen and (max-width: 1200px) {
+    .backgroundChart {
+        border-radius: 50px;
+        box-shadow: 1px 2px 1px 2px rgb(129, 129, 129);
+        margin: 0;
+        padding: 15px;
+        height: 50vh; 
+        width: 100%;  
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .backgroundChart {
+        border-radius: 50px;
+        box-shadow: 1px 2px 1px 2px rgb(129, 129, 129);
+        margin: 0;
+        padding: 15px;
+        height: 30vh; 
+        width: 100%;  
+    }
+}

@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import useFetchData from "../api/ClientAPI";
+import style from './No2.module.css';
 
 ChartJS.register(
   CategoryScale,
@@ -23,7 +24,7 @@ ChartJS.register(
 const URL = "https://global-warming.org/api/nitrous-oxide-api";
 
 function No2Chart() {
-  const { data } = useFetchData(URL);
+  const { data, isLoading } = useFetchData(URL);
 
   let no2Time = data?.nitrous?.map((item) => `${item.date}`);
   let average = data?.nitrous?.map((item) => item.average);
@@ -35,14 +36,14 @@ function No2Chart() {
       {
         label: "Average",
         data: average,
-        backgroundColor: "green",
+        backgroundColor: "yellow",
         fill: false,
         tension: 0.4,
       },
       {
         label: "Trend",
         data: trend,
-        backgroundColor: "yellow",
+        backgroundColor: "violet",
         fill: false,
         tension: 0.4,
       },
@@ -52,6 +53,16 @@ function No2Chart() {
     plugins: {
       legend: true,
     },
+    animation: {
+      duration: 0
+    },
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        beginAtZero: true
+      }
+  },
     tooltips: {
       titleFont: {
         size: 14,
@@ -71,7 +82,14 @@ function No2Chart() {
 
   return (
     <>
-      <Line data={chartData} height={500} width={1000} options={options} />
+    {isLoading ? (
+      <p>Loading...</p>
+    ) : (
+      chartData &&
+    <div className={style.backgroundChart}>
+      <Line data={chartData} options={options} />
+    </div>
+    )}
     </>
   );
 }

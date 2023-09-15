@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import useFetchData from "../api/ClientAPI";
+import style from './Polarice.module.css';
 
 ChartJS.register(
   CategoryScale,
@@ -23,7 +24,7 @@ ChartJS.register(
 const URL = "https://global-warming.org/api/arctic-api";
 
 function PolarIceChart() {
-  const { data } = useFetchData(URL);
+  const { data, isLoading } = useFetchData(URL);
 
   let arcticData = data?.arcticData?.map(
     (item) => `${item.year}/${item.month}`,
@@ -62,6 +63,16 @@ function PolarIceChart() {
     plugins: {
       legend: true,
     },
+    animation: {
+      duration: 0
+    },
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        beginAtZero: true
+      }
+  },
     tooltips: {
       titleFont: {
         size: 14,
@@ -81,7 +92,14 @@ function PolarIceChart() {
 
   return (
     <>
-      <Line data={chartData} height={500} width={1000} options={options} />
+    {isLoading ? (
+      <p>Loading...</p>
+    ) : (
+      chartData &&
+    <div className={style.backgroundChart}>
+      <Line data={chartData} options={options} />
+    </div>
+    )}
     </>
   );
 }
