@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import useFetchData from "../api/ClientAPI";
+import useFetchData from "../../api/ClientAPI";
 import style from './No2.module.css';
 
 ChartJS.register(
