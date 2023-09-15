@@ -36,14 +36,14 @@ function TemperatureChart() {
       {
         label: "Station",
         data: station,
-        backgroundColor: "red",
+        backgroundColor: "orange",
         fill: false,
         tension: 0.4,
       },
       {
         label: "Land",
         data: land,
-        backgroundColor: "orange",
+        backgroundColor: "red",
         fill: false,
         tension: 0.4,
       },
