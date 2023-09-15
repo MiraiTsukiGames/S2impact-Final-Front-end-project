@@ -25,8 +25,9 @@ const URL = "https://global-warming.org/api/arctic-api";
 function PolarIceChart() {
   const { data } = useFetchData(URL);
 
-  let arcticData =
-    data?.arcticData?.map((item) => `${item.year}/${item.month}`);
+  let arcticData = data?.arcticData?.map(
+    (item) => `${item.year}/${item.month}`,
+  );
   let extent = data?.arcticData?.map((item) => item.extent);
   let area = data?.arcticData?.map((item) => item.area);
   let rank = data?.arcticData?.map((item) => item.rank);
