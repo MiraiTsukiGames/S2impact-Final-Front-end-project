@@ -10,8 +10,6 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import useFetchData from "../api/ClientAPI";
-import Loading from "../loading/Loading";
-import Error from "../error/Error";
 
 ChartJS.register(
   CategoryScale,
@@ -25,21 +23,14 @@ ChartJS.register(
 const URL = "https://global-warming.org/api/arctic-api";
 
 function PolarIceChart() {
-  const { data, error, loading } = useFetchData(URL);
+  const { data } = useFetchData(URL);
 
   let arcticData =
-    data?.arcticData?.map((item) => `${item.year}/${item.month}`) || [];
-  let extent = data?.arcticData?.map((item) => item.extent) || [];
-  let area = data?.arcticData?.map((item) => item.area) || [];
-  let rank = data?.arcticData?.map((item) => item.rank) || [];
+    data?.arcticData?.map((item) => `${item.year}/${item.month}`);
+  let extent = data?.arcticData?.map((item) => item.extent);
+  let area = data?.arcticData?.map((item) => item.area);
+  let rank = data?.arcticData?.map((item) => item.rank);
 
-  if (loading) {
-    return <Loading />;
-  }
-
-  if (error) {
-    return <Error error={error} />;
-  }
   const chartData = {
     labels: arcticData,
     datasets: [

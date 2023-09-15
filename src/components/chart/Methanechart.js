@@ -10,8 +10,6 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import useFetchData from "../api/ClientAPI";
-import Loading from "../loading/Loading";
-import Error from "../error/Error";
 
 ChartJS.register(
   CategoryScale,
@@ -25,19 +23,12 @@ ChartJS.register(
 const URL = "https://global-warming.org/api/methane-api";
 
 function MethaneChart() {
-  const { data, error, loading } = useFetchData(URL);
+  const { data } = useFetchData(URL);
 
   let methaneTime = data?.methane?.map((item) => `${item.date}`);
   let average = data?.methane?.map((item) => item.average);
   let trend = data?.methane?.map((item) => item.trend);
 
-  if (loading) {
-    return <Loading />;
-  }
-
-  if (error) {
-    return <Error error={error} />;
-  }
   const chartData = {
     labels: methaneTime,
     datasets: [
