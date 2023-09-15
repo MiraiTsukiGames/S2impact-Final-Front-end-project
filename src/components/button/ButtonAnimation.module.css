@@ -1,0 +1,26 @@
+.animation {
+    margin-top: 40px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    animation: moveUpDown 1.5s infinite;
+}
+
+.animation:hover {
+    cursor: pointer;
+}
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
