@@ -1,5 +1,5 @@
 import React from "react";
-import MethaneChart from "../../components/chart/Metanechart/Methanechart";
+import MethaneChart from "../../components/chart/Methanechart/Methanechart";
 import Button from "../../components/button/Button";
 import { useNavigate } from "react-router-dom";
 import Hero from "../../components/hero/Hero";
