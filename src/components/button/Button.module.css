@@ -9,10 +9,11 @@
 
 .Button:hover {
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
     background-color: darkmagenta;
     color: orange;
     border-color: 2px solid orange;
+    font-size: 18px;
 }
 
 .container {
