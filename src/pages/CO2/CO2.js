@@ -1,5 +1,5 @@
 import React from "react";
-import Co2chart from "../../components/chart/Co2chart";
+import Co2chart from "../../components/chart/CO2chart/Co2chart";
 import Button from "../../components/button/Button";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
