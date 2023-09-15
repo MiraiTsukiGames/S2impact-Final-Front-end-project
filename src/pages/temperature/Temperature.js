@@ -4,6 +4,7 @@ import Button from "../../components/button/Button";
 import { useNavigate } from "react-router-dom";
 import Hero from "../../components/hero/Hero";
 import { useTranslation } from "react-i18next";
+import style from "./Temperature.module.css";
 
 const Temperature = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Temperature = () => {
   const { t } = useTranslation();
 
   return (
-    <section>
+    <section className={style.container}>
       <Hero
         title={t("Temperature")}
         description={t("temperaturedescription")}
