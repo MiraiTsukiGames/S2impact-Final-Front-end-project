@@ -12,15 +12,6 @@
   align-items: center;
 }
 
-.home {
-  width: 80%;
-  padding: 20px;
-  opacity: 70%;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 5px;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -28,7 +19,8 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 1024px) {
   .banner {
     background-image: url("../../assets/img/polarice.jpg");
   }

@@ -1,0 +1,56 @@
+.subtitle {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cardContainer {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: auto;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 1px 2px 1px 5px gray;
+    border-radius: 10px;
+    width: 1200px;
+    height: auto;
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.cardBody:hover {
+    transform: translateY(-5%);
+}
+
+.titleCard {
+    color: #011d36;
+    font-size: 28px;
+    text-align: center;
+}
+
+.cardDescription {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 10px;
+    color: #011d36;
+}
+
+@media (min-width: 1281px) {
+    .cardContainer {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+  }

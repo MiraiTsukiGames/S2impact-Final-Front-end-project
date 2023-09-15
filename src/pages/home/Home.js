@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <section>
       <div className={styles.banner}>
-        <div className={styles.home}>
+        <div className="home">
           <Hero title={t("title")} description={t("description1")} />
         </div>
         <ButtonAnimation onClick={handleClick} />

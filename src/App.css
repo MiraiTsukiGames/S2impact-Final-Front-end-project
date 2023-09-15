@@ -52,3 +52,21 @@
 .checkbox:checked + .label .ball {
   transform: translateX(24px);
 }
+
+#Dark .home{
+  background-color: #292c35;
+  width: 80%;
+  padding: 20px;
+  opacity: 70%;
+  border-radius: 5px;
+  border-radius: 5px;
+}
+
+#Light .home{
+  background-color: white;
+  width: 80%;
+  padding: 20px;
+  opacity: 70%;
+  border-radius: 5px;
+  border-radius: 5px;
+}
