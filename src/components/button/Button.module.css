@@ -1,0 +1,28 @@
+.Button {
+    font-size: 15px;
+    background-color: blueviolet;
+    color: white;
+    border-color: 2px solid rgb(92, 91, 91);
+    border-radius: 30px;
+    padding: 15px 40px;
+}
+
+.Button:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: darkmagenta;
+    color: orange;
+    border-color: 2px solid orange;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .Button {
+        padding: 10px 20px;
+    }
+  }

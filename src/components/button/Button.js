@@ -1,12 +1,15 @@
 import React from "react";
+import style from "./Button.module.css";
 
 export default function Button(props) {
   return (
+    <div className={style.container}>
     <button
-      className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+      className={style.Button}
       onClick={props.onClick}
     >
       {props.text}
     </button>
+    </div>
   );
 }
