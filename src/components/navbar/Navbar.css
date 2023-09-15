@@ -57,7 +57,7 @@
   font-weight: bold;
 }
 
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
 
   .hamburger {
     display: block;
@@ -80,5 +80,17 @@
 
   .menu.show {
     transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .items p {
+    font-size: 15px;
+  }
+
+  .items {
+    gap: 0;
+    align-items: end;
+    justify-content: flex-end;
   }
 }
