@@ -11,11 +11,7 @@ export const useCo2FetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/co2-api",
         );
-        if (response.ok) {
           setCo2Data(response.data);
-        } else {
-          throw new Error("No available");
-        }
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -37,11 +33,7 @@ export const useMethaneFetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/methane-api",
         );
-        if (response.ok) {
           setMethaneData(response.data);
-        } else {
-          throw new Error("No available");
-        }
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -63,11 +55,7 @@ export const useNo2FetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/nitrous-oxide-api",
         );
-        if (response.ok) {
           setNo2Data(response.data);
-        } else {
-          throw new Error("No available");
-        }
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -89,11 +77,7 @@ export const useArcticFetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/arctic-api",
         );
-        if (response.ok) {
           setPolarData(response.data);
-        } else {
-          throw new Error("No available");
-        }
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -115,12 +99,7 @@ export const useTemperatureFetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/temperature-api",
         );
-        if (response.ok) {
           setTemperatureData(response.data);
-        } else {
-          throw new Error("No available");
-        }
-
         setLoading(false);
       } catch (error) {
         setLoading(false);
