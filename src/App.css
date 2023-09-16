@@ -52,7 +52,7 @@
   transform: translateX(24px);
 }
 
-#Dark .home{
+#Dark .home {
   background-color: #292c35;
   width: 80%;
   padding: 20px;
@@ -61,7 +61,7 @@
   border-radius: 5px;
 }
 
-#Light .home{
+#Light .home {
   background-color: #e7e7e7;
   width: 80%;
   padding: 20px;
@@ -76,7 +76,6 @@
 #Light a {
   color: #011d36;
 }
-
 
 #Light .menu {
   background-color: #e7e7e7;
@@ -97,17 +96,17 @@
 }
 
 @media only screen and (max-width: 1280px) {
- .label {
-  left: 80%;
- }
+  .label {
+    left: 80%;
+  }
 
- #Light .menu li {
-  border-bottom: 2px solid #011d36;
- }
+  #Light .menu li {
+    border-bottom: 2px solid #011d36;
+  }
 
- #Dark .menu li {
-  border-bottom: 2px solid #ffffff;
- }
+  #Dark .menu li {
+    border-bottom: 2px solid #ffffff;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -122,7 +121,6 @@
     top: -30px;
     width: 40px;
     height: 15px;
-
   }
 
   .ball {

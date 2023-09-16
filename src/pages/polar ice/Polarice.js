@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import style from "./Polarice.module.css";
 
 const PolarIce = () => {
-
   const { t } = useTranslation();
 
   return (

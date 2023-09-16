@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import style from "./Methane.module.css";
 
 const Methane = () => {
-
   const { t } = useTranslation();
 
   return (

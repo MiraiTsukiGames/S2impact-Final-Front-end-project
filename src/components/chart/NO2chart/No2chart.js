@@ -10,7 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { useNo2FetchData } from "../../api/ClientAPI";
-import style from './No2.module.css';
+import style from "./No2.module.css";
 
 ChartJS.register(
   CategoryScale,
@@ -23,10 +23,10 @@ ChartJS.register(
 
 function No2Chart() {
   const { no2Data, isLoading } = useNo2FetchData();
-    let trend = no2Data?.nitrous?.map((item) => item.trend);
-    let average = no2Data?.nitrous?.map((item) => item.average);
-    let no2Time = no2Data?.nitrous?.map((item) => `${item.date}`);
-    
+  let trend = no2Data?.nitrous?.map((item) => item.trend);
+  let average = no2Data?.nitrous?.map((item) => item.average);
+  let no2Time = no2Data?.nitrous?.map((item) => `${item.date}`);
+
   const chartData = {
     labels: no2Time,
     datasets: [
@@ -51,15 +51,15 @@ function No2Chart() {
       legend: true,
     },
     animation: {
-      duration: 0
+      duration: 0,
     },
     responsive: true,
     maintainAspectRatio: false,
     scales: {
       x: {
-        beginAtZero: true
-      }
-  },
+        beginAtZero: true,
+      },
+    },
     tooltips: {
       titleFont: {
         size: 14,
@@ -79,13 +79,13 @@ function No2Chart() {
 
   return (
     <>
-    {isLoading ? ( 
-      <div>Loading...</div>
-    ) : (
-    <div className={style.backgroundChart}>
-      <Line data={chartData} options={options} />
-    </div>
-    )}
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className={style.backgroundChart}>
+          <Line data={chartData} options={options} />
+        </div>
+      )}
     </>
   );
 }

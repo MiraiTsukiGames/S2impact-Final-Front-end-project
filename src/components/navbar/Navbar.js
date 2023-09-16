@@ -16,23 +16,27 @@ export default function Navbar() {
 
   return (
     //navbar section
-    <nav className={`navbar ${isOpen ? 'sidebar' : ''}`}>
-    <div className="items">
-      <p>{t("selectALanguage")}</p>
-      <button onClick={() => changeLanguage("it")} className="button">Italiano</button>
-      <button onClick={() => changeLanguage("en")} className="button">English</button>
+    <nav className={`navbar ${isOpen ? "sidebar" : ""}`}>
+      <div className="items">
+        <p>{t("selectALanguage")}</p>
+        <button onClick={() => changeLanguage("it")} className="button">
+          Italiano
+        </button>
+        <button onClick={() => changeLanguage("en")} className="button">
+          English
+        </button>
       </div>
       <div className="navbar-container">
-      <img src={Logo} className="brand-name" alt="logo"/>
-      {/*hamburger button*/}
-      <button
-        title="hamburger-menu"
-        className="hamburger"
-        onClick={toggleNavbar}
-      >
-      {isOpen ? <FaTimes /> : <FaBars />}
-      </button>
-        <ul className={`menu ${isOpen ? 'show' : ''}`}>
+        <img src={Logo} className="brand-name" alt="logo" />
+        {/*hamburger button*/}
+        <button
+          title="hamburger-menu"
+          className="hamburger"
+          onClick={toggleNavbar}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+        <ul className={`menu ${isOpen ? "show" : ""}`}>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -52,7 +56,7 @@ export default function Navbar() {
             <Link to="/temperature">Temperature</Link>
           </li>
         </ul>
-        </div>
+      </div>
     </nav>
   );
 }

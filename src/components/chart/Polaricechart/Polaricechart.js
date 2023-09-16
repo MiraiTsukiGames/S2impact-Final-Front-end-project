@@ -10,7 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { useArcticFetchData } from "../../api/ClientAPI";
-import style from './Polarice.module.css';
+import style from "./Polarice.module.css";
 
 ChartJS.register(
   CategoryScale,
@@ -21,12 +21,13 @@ ChartJS.register(
   Tooltip,
 );
 
-
 function PolarIceChart() {
   const { polarData, isLoading } = useArcticFetchData();
   let area = polarData?.arcticData?.map((item) => `${item.area}`);
   let extent = polarData?.arcticData?.map((item) => `${item.extent}`);
-  let arcticTime = polarData?.arcticData?.map((item) => `${item.year}/${item.month}`);
+  let arcticTime = polarData?.arcticData?.map(
+    (item) => `${item.year}/${item.month}`,
+  );
   let rank = polarData?.arcticData?.map((item) => `${item.rank}`);
 
   const chartData = {
@@ -60,15 +61,15 @@ function PolarIceChart() {
       legend: true,
     },
     animation: {
-      duration: 0
+      duration: 0,
     },
     responsive: true,
     maintainAspectRatio: false,
     scales: {
       x: {
-        beginAtZero: true
-      }
-  },
+        beginAtZero: true,
+      },
+    },
     tooltips: {
       titleFont: {
         size: 14,
@@ -88,13 +89,13 @@ function PolarIceChart() {
 
   return (
     <>
-    {isLoading ? ( 
-      <div>Loading...</div>
-    ) : (
-    <div className={style.backgroundChart}>
-      <Line data={chartData} options={options} />
-    </div>
-    )}
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className={style.backgroundChart}>
+          <Line data={chartData} options={options} />
+        </div>
+      )}
     </>
   );
 }

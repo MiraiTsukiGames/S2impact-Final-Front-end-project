@@ -5,7 +5,6 @@ import Hero from "../../components/hero/Hero";
 import style from "./NO2.module.css";
 
 const NO2 = () => {
-
   const { t } = useTranslation();
 
   return (

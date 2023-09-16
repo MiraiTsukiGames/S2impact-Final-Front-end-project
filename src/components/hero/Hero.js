@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../title/Title";
-import style from "./Hero.module.css"
+import style from "./Hero.module.css";
 
 export default function Hero({ title, description }) {
   return (

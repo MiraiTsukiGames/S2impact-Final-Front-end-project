@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import style from './Methane.module.css';
+import style from "./Methane.module.css";
 import { useMethaneFetchData } from "../../api/ClientAPI";
 
 ChartJS.register(
@@ -22,11 +22,10 @@ ChartJS.register(
 );
 
 function MethaneChart() {
-    const { methaneData, isLoading } = useMethaneFetchData();
-    let trend = methaneData?.methane?.map((item) => item.trend);
-    let average = methaneData?.methane?.map((item) => item.average);
-    let methaneTime = methaneData?.methane?.map((item) => `${item.date}`);
-
+  const { methaneData, isLoading } = useMethaneFetchData();
+  let trend = methaneData?.methane?.map((item) => item.trend);
+  let average = methaneData?.methane?.map((item) => item.average);
+  let methaneTime = methaneData?.methane?.map((item) => `${item.date}`);
 
   const chartData = {
     labels: methaneTime,
@@ -52,14 +51,14 @@ function MethaneChart() {
       legend: true,
     },
     animation: {
-      duration: 0
+      duration: 0,
     },
     responsive: true,
     maintainAspectRatio: false,
     scales: {
       x: {
-        beginAtZero: true
-      }
+        beginAtZero: true,
+      },
     },
     tooltips: {
       titleFont: {
@@ -80,15 +79,15 @@ function MethaneChart() {
 
   return (
     <>
-       {isLoading ? ( 
-      <div>Loading...</div>
-    ) : (
-      <div className={style.backgroundChart}>
-      <Line data={chartData} options={options} />
-    </div>
-    )}
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className={style.backgroundChart}>
+          <Line data={chartData} options={options} />
+        </div>
+      )}
     </>
   );
-};
+}
 
 export default MethaneChart;

@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import style from './Temperature.module.css';
+import style from "./Temperature.module.css";
 import { useTemperatureFetchData } from "../../api/ClientAPI";
 
 ChartJS.register(
@@ -22,7 +22,7 @@ ChartJS.register(
 );
 
 function TemperatureChart() {
-  const { temperatureData, isLoading} = useTemperatureFetchData();
+  const { temperatureData, isLoading } = useTemperatureFetchData();
   let temperatureTime = temperatureData?.result?.map((item) => `${item.time}`);
   let station = temperatureData?.result?.map((item) => `${item.station}`);
   let land = temperatureData?.result?.map((item) => `${item.land}`);
@@ -51,15 +51,15 @@ function TemperatureChart() {
       legend: true,
     },
     animation: {
-      duration: 0
+      duration: 0,
     },
     responsive: true,
     maintainAspectRatio: false,
     scales: {
       x: {
-        beginAtZero: true
-      }
-  },
+        beginAtZero: true,
+      },
+    },
     tooltips: {
       titleFont: {
         size: 14,
@@ -79,13 +79,13 @@ function TemperatureChart() {
 
   return (
     <>
-    {isLoading ? ( 
-      <div>Loading...</div>
-    ) : (
-    <div className={style.backgroundChart}>
-      <Line data={chartData} options={options} />
-    </div>
-    )}
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className={style.backgroundChart}>
+          <Line data={chartData} options={options} />
+        </div>
+      )}
     </>
   );
 }

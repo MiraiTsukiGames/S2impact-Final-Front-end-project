@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import style from "./Temperature.module.css";
 
 const Temperature = () => {
-
   const { t } = useTranslation();
 
   return (

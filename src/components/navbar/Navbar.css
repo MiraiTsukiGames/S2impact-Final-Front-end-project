@@ -8,7 +8,7 @@
   height: 100%;
 }
 
- img {
+img {
   height: auto;
 }
 
@@ -80,7 +80,6 @@
 }
 
 @media only screen and (max-width: 1280px) {
-
   .hamburger {
     display: block;
     padding: 15px;
