@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from "../../assets/img/climate change logo.png";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -22,6 +23,7 @@ export default function Navbar() {
       <button onClick={() => changeLanguage("en")} className="button">English</button>
       </div>
       <div className="navbar-container">
+      <img src={Logo} className="brand-name" alt="logo"/>
       {/*hamburger button*/}
       <button
         title="hamburger-menu"
