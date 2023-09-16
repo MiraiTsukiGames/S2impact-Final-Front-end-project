@@ -1,26 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 .banner {
   background-image: url("../../assets/img/globalwarming.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
-  width: 100%;
+  background-position: center;
   height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 
 @media only screen and (max-width: 1024px) {
   .banner {

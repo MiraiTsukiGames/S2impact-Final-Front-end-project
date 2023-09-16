@@ -5,8 +5,6 @@
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: "Montserrat";
-  font-size: 1.2rem;
-  text-decoration: none;
 }
 
 #Dark {
@@ -16,7 +14,7 @@
 
 #Light {
   color: #011d36;
-  background-color: #ffffff;
+  background-color: #e7e7e7;
 }
 .checkbox {
   opacity: 0;
@@ -64,11 +62,10 @@
 }
 
 #Light .home{
-  background-color: white;
+  background-color: #e7e7e7;
   width: 80%;
   padding: 20px;
   opacity: 70%;
-  border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -82,7 +79,7 @@
 
 
 #Light .menu {
-  background-color: white;
+  background-color: #e7e7e7;
 }
 
 #Dark .menu {
@@ -113,10 +110,16 @@
  }
 }
 
+@media only screen and (max-width: 1024px) {
+  .label {
+    left: 70%;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .label {
     left: 45%;
-    top: -40px;
+    top: -30px;
     width: 40px;
     height: 15px;
 

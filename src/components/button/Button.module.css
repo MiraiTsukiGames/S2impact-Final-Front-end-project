@@ -1,17 +1,18 @@
 .Button {
-    font-size: 15px;
-    background-color: blueviolet;
-    color: white;
+    font-size: 18px;
+    background-color: rgb(255, 102, 0);
+    color: orange;
     border-color: 2px solid rgb(92, 91, 91);
     border-radius: 30px;
     padding: 15px 40px;
+    font-weight: bold;
 }
 
 .Button:hover {
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    background-color: darkmagenta;
-    color: orange;
+    background-color: darkorange;
+    color: black;
     border-color: 2px solid orange;
     font-size: 18px;
 }
