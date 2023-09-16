@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../button/Button";
 import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -19,8 +18,8 @@ export default function Navbar() {
     <nav className={`navbar ${isOpen ? 'sidebar' : ''}`}>
     <div className="items">
       <p>{t("selectALanguage")}</p>
-      <Button text={"Italiano"} onClick={() => changeLanguage("it")} className="button"/>
-      <Button text={"English"} onClick={() => changeLanguage("en")} className="button"/>
+      <button onClick={() => changeLanguage("it")} className="button">Italiano</button>
+      <button onClick={() => changeLanguage("en")} className="button">English</button>
       </div>
       <div className="navbar-container">
       {/*hamburger button*/}
