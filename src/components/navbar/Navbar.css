@@ -17,11 +17,13 @@
   padding: 14px 20px;
   background-color: blueviolet;
   color: white;
+  transition: 0.3s;
 }
 
 .button:hover {
   color: orange;
   background-color: darkmagenta;
+  cursor: pointer;
 }
 
 .navbar-container {
@@ -46,7 +48,6 @@
   margin: 0;
   padding: 0;
   opacity: 90%;
-  border: 2px solid black;
 }
 
 .menu li {
@@ -77,6 +78,7 @@
     flex-direction: column;
     border-radius: 10px;
     position: absolute;
+    border: 2px solid black;
     top: 150px;
     left: 0;
     width: 60%;
