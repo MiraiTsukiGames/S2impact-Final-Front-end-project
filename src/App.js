@@ -39,8 +39,8 @@ const App = () => {
         checked={checked}
       />
       <label htmlFor="checkbox" className="label">
-        <BsMoonStarsFill color="white" size={12} />
-        <BsFillSunFill color="yellow" size={12} />
+        <BsMoonStarsFill className="Moon" />
+        <BsFillSunFill className="Sun" />
         <div className="ball"></div>
       </label>
       <main>

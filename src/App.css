@@ -80,6 +80,7 @@
   color: #011d36;
 }
 
+
 #Light .menu {
   background-color: white;
 }
@@ -88,8 +89,50 @@
   background-color: #292c35;
 }
 
-@media only screen and (max-width: 1024px) {
+.Moon {
+  color: white;
+  font-size: 12px;
+}
+
+.Sun {
+  color: yellow;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 1280px) {
  .label {
   left: 80%;
  }
+
+ #Light .menu li {
+  border-bottom: 2px solid #011d36;
+ }
+
+ #Dark .menu li {
+  border-bottom: 2px solid #ffffff;
+ }
+}
+
+@media only screen and (max-width: 576px) {
+  .label {
+    left: 50%;
+    top: -5px;
+    width: 40px;
+    height: 15px;
+
+  }
+
+  .ball {
+    width: 12px;
+    height: 12px;
+    top: 2px;
+  }
+
+  .Moon {
+    font-size: 10px;
+  }
+
+  .Sun {
+    font-size: 10px;
+  }
 }
