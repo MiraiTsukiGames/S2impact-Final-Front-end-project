@@ -11,7 +11,7 @@ export const useCo2FetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/co2-api",
         );
-          setCo2Data(response.data);
+        setCo2Data(response.data);
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -33,7 +33,7 @@ export const useMethaneFetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/methane-api",
         );
-          setMethaneData(response.data);
+        setMethaneData(response.data);
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -55,7 +55,7 @@ export const useNo2FetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/nitrous-oxide-api",
         );
-          setNo2Data(response.data);
+        setNo2Data(response.data);
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -77,7 +77,7 @@ export const useArcticFetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/arctic-api",
         );
-          setPolarData(response.data);
+        setPolarData(response.data);
         setLoading(false);
       } catch (error) {
         setLoading(false);
@@ -99,7 +99,7 @@ export const useTemperatureFetchData = () => {
         const response = await axios.get(
           "https://global-warming.org/api/temperature-api",
         );
-          setTemperatureData(response.data);
+        setTemperatureData(response.data);
         setLoading(false);
       } catch (error) {
         setLoading(false);
