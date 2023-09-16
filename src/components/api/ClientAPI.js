@@ -10,7 +10,11 @@ export const useCo2FetchData = () => {
       try {
         setLoading(true);
         const response = await axios.get("https://global-warming.org/api/co2-api");
-        setCo2Data(response.data);
+        if (response.ok) {
+          setCo2Data(response.data);
+        } else {
+          throw new Error("No available");
+        }
         setLoading(false);
       } catch (error) {
         setLoading(false)
@@ -31,7 +35,11 @@ export const useCo2FetchData = () => {
     try {
       setLoading(true);
       const response = await axios.get("https://global-warming.org/api/methane-api");
-      setMethaneData(response.data);
+      if (response.ok) {
+        setMethaneData(response.data);
+    } else {
+      throw new Error("No available");
+    }
       setLoading(false);
     } catch (error) {
       setLoading(false)
@@ -51,7 +59,11 @@ export const useNo2FetchData = () => {
     try {
       setLoading(true);
       const response = await axios.get("https://global-warming.org/api/nitrous-oxide-api");
+      if (response.ok) {
       setNo2Data(response.data);
+      } else {
+        throw new Error("No available");
+      }
       setLoading(false);
     } catch (error) {
       setLoading(false)
@@ -71,7 +83,11 @@ const [isLoading, setLoading] = useState(false);
     try {
       setLoading(true);
       const response = await axios.get("https://global-warming.org/api/arctic-api");
-      setPolarData(response.data);
+      if (response.ok) {
+        setPolarData(response.data);
+      } else {
+        throw new Error("No available");
+      }
       setLoading(false);
     } catch (error) {
       setLoading(false)
@@ -92,7 +108,12 @@ export const useTemperatureFetchData = () => {
   try {
     setLoading(true);
     const response = await axios.get("https://global-warming.org/api/temperature-api");
-    setTemperatureData(response.data);
+    if (response.ok) {
+      setTemperatureData(response.data);
+    } else {
+      throw new Error("No available");
+    }
+    
     setLoading(false);
   } catch (error) {
     setLoading(false)
