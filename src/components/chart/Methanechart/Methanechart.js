@@ -36,14 +36,14 @@ function MethaneChart() {
       {
         label: "average",
         data: average,
-        backgroundColor: "gold",
+        backgroundColor: "green",
         fill: false,
         tension: 0.4,
       },
       {
         label: "trend",
         data: trend,
-        backgroundColor: "silver",
+        backgroundColor: "darkblue",
         fill: false,
         tension: 0.4,
       },

@@ -36,14 +36,14 @@ function No2Chart() {
       {
         label: "Average",
         data: average,
-        backgroundColor: "yellow",
+        backgroundColor: "orange",
         fill: false,
         tension: 0.4,
       },
       {
         label: "Trend",
         data: trend,
-        backgroundColor: "pink",
+        backgroundColor: "yellow",
         fill: false,
         tension: 0.4,
       },

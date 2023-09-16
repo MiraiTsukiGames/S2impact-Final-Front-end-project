@@ -36,16 +36,16 @@ function Chart() {
     labels: co2Time,
     datasets: [
       {
-        label: "trend",
-        data: trend,
-        backgroundColor: "#B8860B",
+        label: "cycle",
+        data: cycle,
+        backgroundColor: "rgba(0, 0, 255, 1)",
         fill: false,
         tension: 0.4
       },
       {
-        label: "cycle",
-        data: cycle,
-        backgroundColor: "brown",
+        label: "trend",
+        data: trend,
+        backgroundColor: "lightgreen",
         fill: false,
         tension: 0.4
       },
