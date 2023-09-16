@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import useFetchData from "../../api/ClientAPI";
+import { useArcticFetchData } from "../../api/ClientAPI";
 import style from './Polarice.module.css';
 
 ChartJS.register(
@@ -21,20 +21,16 @@ ChartJS.register(
   Tooltip,
 );
 
-const URL = "https://global-warming.org/api/arctic-api";
 
 function PolarIceChart() {
-  const { data, isLoading } = useFetchData(URL);
-
-  let arcticData = data?.arcticData?.map(
-    (item) => `${item.year}/${item.month}`,
-  );
-  let extent = data?.arcticData?.map((item) => item.extent);
-  let area = data?.arcticData?.map((item) => item.area);
-  let rank = data?.arcticData?.map((item) => item.rank);
+  const { polarData, isLoading } = useArcticFetchData();
+  let area = polarData?.arcticData?.map((item) => `${item.area}`);
+  let extent = polarData?.arcticData?.map((item) => `${item.extent}`);
+  let arcticTime = polarData?.arcticData?.map((item) => `${item.year}/${item.month}`);
+  let rank = polarData?.arcticData?.map((item) => `${item.rank}`);
 
   const chartData = {
-    labels: arcticData,
+    labels: arcticTime,
     datasets: [
       {
         label: "Extent",
@@ -46,14 +42,14 @@ function PolarIceChart() {
       {
         label: "Area",
         data: area,
-        backgroundColor: "cyan",
+        backgroundColor: "gray",
         fill: false,
         tension: 0.4,
       },
       {
         label: "Rank",
         data: rank,
-        backgroundColor: "grey",
+        backgroundColor: "cyan",
         fill: false,
         tension: 0.4,
       },
@@ -92,10 +88,9 @@ function PolarIceChart() {
 
   return (
     <>
-    {isLoading ? (
-      <p>Loading...</p>
+    {isLoading ? ( 
+      <div>Loading...</div>
     ) : (
-      chartData &&
     <div className={style.backgroundChart}>
       <Line data={chartData} options={options} />
     </div>

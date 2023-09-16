@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import useFetchData from "../../api/ClientAPI";
+import { useNo2FetchData } from "../../api/ClientAPI";
 import style from './No2.module.css';
 
 ChartJS.register(
@@ -21,15 +21,12 @@ ChartJS.register(
   Tooltip,
 );
 
-const URL = "https://global-warming.org/api/nitrous-oxide-api";
-
 function No2Chart() {
-  const { data, isLoading } = useFetchData(URL);
-
-  let no2Time = data?.nitrous?.map((item) => `${item.date}`);
-  let average = data?.nitrous?.map((item) => item.average);
-  let trend = data?.nitrous?.map((item) => item.trend);
-
+  const { no2Data, isLoading } = useNo2FetchData();
+    let trend = no2Data?.nitrous?.map((item) => item.trend);
+    let average = no2Data?.nitrous?.map((item) => item.average);
+    let no2Time = no2Data?.nitrous?.map((item) => `${item.date}`);
+    
   const chartData = {
     labels: no2Time,
     datasets: [
@@ -82,10 +79,9 @@ function No2Chart() {
 
   return (
     <>
-    {isLoading ? (
-      <p>Loading...</p>
+    {isLoading ? ( 
+      <div>Loading...</div>
     ) : (
-      chartData &&
     <div className={style.backgroundChart}>
       <Line data={chartData} options={options} />
     </div>

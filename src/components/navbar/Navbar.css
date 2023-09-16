@@ -55,7 +55,7 @@
 .menu {
   list-style: none;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   opacity: 90%;

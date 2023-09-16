@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import useFetchData from "../../api/ClientAPI";
+import { useCo2FetchData } from "../../api/ClientAPI";
 import style from './Co2.module.css';
 
 ChartJS.register(
@@ -21,36 +21,33 @@ ChartJS.register(
   Tooltip,
 );
 
-const URL = "https://global-warming.org/api/co2-api";
 
-function Chart() {
-  const { data, isLoading } = useFetchData(URL);
+function Chart () {
+        const { co2Data, isLoading } = useCo2FetchData();
+        let trend = co2Data?.co2?.map((item) => item.trend);
+        let cycle = co2Data?.co2?.map((item) => item.cycle);
+        let co2Time = co2Data?.co2?.map((item) => `${item.year}/${item.month}/${item.day}`);
 
-  let co2Time = data?.co2?.map(
-    (item) => `${item.year}/${item.month}/${item.day}`,
-  );
-  let trend = data?.co2?.map((item) => item.trend);
-  let cycle = data?.co2?.map((item) => item.cycle);
+        const chartData = {
+          labels: co2Time,
+          datasets: [
+            {
+              label: "cycle",
+              data: cycle,
+              backgroundColor: "rgba(0, 0, 255, 1)",
+              fill: false,
+              tension: 0.4
+            },
+            {
+              label: "trend",
+              data: trend,
+              backgroundColor: "lightgreen",
+              fill: false,
+              tension: 0.4
+            },
+          ],
+        };
 
-  const chartData = {
-    labels: co2Time,
-    datasets: [
-      {
-        label: "cycle",
-        data: cycle,
-        backgroundColor: "rgba(0, 0, 255, 1)",
-        fill: false,
-        tension: 0.4
-      },
-      {
-        label: "trend",
-        data: trend,
-        backgroundColor: "lightgreen",
-        fill: false,
-        tension: 0.4
-      },
-    ],
-  };
   const options = {
     plugins: {
       legend: true,
@@ -84,16 +81,14 @@ function Chart() {
 
   return (
     <>
-    {isLoading ? (
-      <p>Loading...</p>
+    {isLoading ? ( 
+      <div>Loading...</div>
     ) : (
-      chartData &&
       <div className={style.backgroundChart}>
       <Line data={chartData} options={options} />
     </div>
     )}
     </>
   );
-}
-
+ }
 export default Chart;
