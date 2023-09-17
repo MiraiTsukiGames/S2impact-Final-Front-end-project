@@ -10,7 +10,7 @@ const CO2 = () => {
   return (
     <section className={style.container}>
     <Helmet>
-      <title>Co2 Chart</title>
+      <title>Co2 {t("title3")}</title>
       <meta name="description" content="dioxide carbon data"/>
     </Helmet>
       <div className={style.heroContainer}>
