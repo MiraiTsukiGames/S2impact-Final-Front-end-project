@@ -24,10 +24,10 @@ const Home = () => {
       <meta name="author" content="Samanta Mancini"/>
       <meta name="og:title" content="Climate Change Alert"/>
       <meta name="og:description" content="Climate Change Alert graphs"/>
-      <meta name="og:image" content="URL dell'immagine Open Graph"/>
+      <meta name="og:image" content="assets/img/climate change logo.png"/>
       <meta name="twitter:title" content="Climate Change Alert"/>
       <meta name="twitter:description" content="Climate Change Alert graphs"/>
-      <meta name="twitter:image" content="URL dell'immagine Twitter"/>
+      <meta name="twitter:image" content="assets/img/climate change logo.png"/>
     </Helmet>
       <div className={styles.banner}>
         <div className="home">
