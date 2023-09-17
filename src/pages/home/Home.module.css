@@ -15,6 +15,10 @@
   align-items: center;
 }
 
+.buttonContainer {
+  margin-left: 3%;
+}
+
 @media only screen and (max-width: 1024px) {
   .banner {
     background-image: url("../../assets/img/polarice.jpg");

@@ -37,10 +37,12 @@ const Home = () => {
         <div className="home">
           <Hero title={t("title")} description={t("description1")} />
         </div>
-        <ButtonAnimation onClick={handleScrollDown} />
+        <ButtonAnimation onClick={handleScrollDown} icon="arrowDown" />
       </div>
       <Cards scroll={ref} />
-      <ButtonAnimation onClick={handleScrollUp} />
+      <div className={styles.buttonContainer}>
+      <ButtonAnimation onClick={handleScrollUp} icon="arrowUp" />
+      </div>
     </section>
   );
 };
