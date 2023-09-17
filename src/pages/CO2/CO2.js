@@ -19,7 +19,7 @@ const CO2 = () => {
       <meta name="og:image" content="assets/img/climate change logo.png"/>
       <meta name="twitter:title" content="Co2 graph"/>
       <meta name="twitter:description" content="dioxide carbon data"/>
-      <meta name="twitter:image" content="assets/img/climate change logo.png"/>
+      <meta name="twitter:image" content="https://miraitsukigithub.io/src/assets/img/climate change logo.png"/>
     </Helmet>
       <div className={style.heroContainer}>
         <Hero title={"CO2"} description={t("co2description")} />
