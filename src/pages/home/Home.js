@@ -26,12 +26,15 @@ const Home = () => {
       <meta name="description" content="Climate Change Alert graphs" />
       <meta name="keywords" content="allarme cambiamento climatico, cambiamento climatico, climate change" />
       <meta name="author" content="Samanta Mancini"/>
+      <meta name="og:locale" content="it_IT"/>
+      <meta name="og:type" content="website"/>
       <meta name="og:title" content="Climate Change Alert"/>
       <meta name="og:description" content="Climate Change Alert graphs"/>
-      <meta name="og:image" content="assets/img/climate change logo.png"/>
+      <meta property="og:site_name" content="Climate Change Alert"/>
+      <meta name="og:image" content="https://climatechangealert.netlify.app/src/assets/img/climate change logo.png"/>
       <meta name="twitter:title" content="Climate Change Alert"/>
       <meta name="twitter:description" content="Climate Change Alert graphs"/>
-      <meta name="twitter:image" content="assets/img/climate change logo.png"/>
+      <meta name="twitter:image" content="https://climatechangealert.netlify.app/src/assets/img/climate change logo.png"/>
     </Helmet>
       <div className={styles.banner}>
         <div className="home">
