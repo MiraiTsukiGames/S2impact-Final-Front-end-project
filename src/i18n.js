@@ -14,6 +14,7 @@ i18next
         translation: {
           title: "Climate Change Alert",
           title2: "Graphs",
+          title3: "Chart",
           selectALanguage: "Select a language",
           description1:
             "The global warming is the increase in the average temperature of the Earth due to greenhouse gas emissions caused by human activities. It is important to reduce emissions, promote renewable energy, and adopt sustainable practices to protect our planet.",
@@ -47,6 +48,7 @@ i18next
         translation: {
           title: "Climate Change Alert",
           title2: "Grafici",
+          title3: "Grafico",
           selectALanguage: "Seleziona una lingua",
           description1:
             "Il riscaldamento globale è l'aumento della temperatura media della Terra a causa delle emissioni di gas serra prodotte dalle attività umane. È importante ridurre le emissioni, promuovere l'energia rinnovabile e adottare pratiche sostenibili per proteggere il nostro pianeta.",
