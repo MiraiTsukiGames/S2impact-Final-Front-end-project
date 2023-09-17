@@ -12,8 +12,6 @@
 .heroContainer {
   margin-top: 0;
   margin-bottom: 0;
+  max-width: 1200px;
 }
 
-.buttonContainer {
-  margin-top: 0;
-}
