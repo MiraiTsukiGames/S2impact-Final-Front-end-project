@@ -27,7 +27,9 @@ const NO2 = () => {
       <meta name="twitter:description" content="nitrous data"/>
       <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
+    <div className={style.heroContainer}>
       <Hero title={"NO2"} description={t("no2description")} />
+      </div>
       <No2Chart />
     </section>
   );

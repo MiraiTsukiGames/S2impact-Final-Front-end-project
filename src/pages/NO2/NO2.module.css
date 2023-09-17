@@ -8,3 +8,9 @@
   padding: 0;
   margin-top: 20px;
 }
+
+.heroContainer {
+  max-width: 1200px;
+  margin-top: 0;
+  padding: 0;
+}

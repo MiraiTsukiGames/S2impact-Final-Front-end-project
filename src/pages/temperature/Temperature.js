@@ -27,10 +27,12 @@ const Temperature = () => {
       <meta name="twitter:description" content="temperature data"/>
       <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
+    <div className={style.heroContainer}>
       <Hero
         title={t("Temperature")}
         description={t("temperaturedescription")}
       />
+      </div>
       <TemperatureChart />
     </section>
   );
