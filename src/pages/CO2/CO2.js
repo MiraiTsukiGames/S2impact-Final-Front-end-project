@@ -12,6 +12,14 @@ const CO2 = () => {
     <Helmet>
       <title>Co2 {t("title3")}</title>
       <meta name="description" content="dioxide carbon data"/>
+      <meta name="keywords" content="co2, grafico co2, co2 chart" />
+      <meta name="author" content="Samanta Mancini"/>
+      <meta name="og:title" content="Co2 graph"/>
+      <meta name="og:description" content="dioxide carbon data"/>
+      <meta name="og:image" content="assets/img/climate change logo.png"/>
+      <meta name="twitter:title" content="Co2 graph"/>
+      <meta name="twitter:description" content="dioxide carbon data"/>
+      <meta name="twitter:image" content="assets/img/climate change logo.png"/>
     </Helmet>
       <div className={style.heroContainer}>
         <Hero title={"CO2"} description={t("co2description")} />
