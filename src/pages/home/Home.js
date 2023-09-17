@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import ButtonAnimation from "../../components/button/ButtonAnimation";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import styles from "./Home.module.css";
+import style from "./Home.module.css";
 import Cards from "../../components/cards/Cards";
 import Hero from "../../components/hero/Hero";
 
@@ -38,14 +38,14 @@ const Home = () => {
       <meta name="twitter:description" content="Climate Change Alert graphs"/>
       <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
-      <div className={styles.banner}>
+      <div className={style.banner}>
         <div className="home">
           <Hero title={t("title")} description={t("description1")} />
         </div>
         <ButtonAnimation onClick={handleScrollDown} icon="arrowDown" />
       </div>
       <Cards scroll={ref} />
-      <div className={styles.buttonContainer}>
+      <div className={style.buttonContainer}>
       <ButtonAnimation onClick={handleScrollUp} icon="arrowUp" />
       </div>
     </section>
