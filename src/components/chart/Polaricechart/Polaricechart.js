@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { useArcticFetchData } from "../../api/ClientAPI";
+import Loading from "../../loading/Loading";
 import style from "./Polarice.module.css";
 
 ChartJS.register(
@@ -90,7 +91,7 @@ function PolarIceChart() {
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />

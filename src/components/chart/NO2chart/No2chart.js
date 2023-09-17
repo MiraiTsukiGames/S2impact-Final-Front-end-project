@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { useNo2FetchData } from "../../api/ClientAPI";
+import Loading from "../../loading/Loading";
 import style from "./No2.module.css";
 
 ChartJS.register(
@@ -80,7 +81,7 @@ function No2Chart() {
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />

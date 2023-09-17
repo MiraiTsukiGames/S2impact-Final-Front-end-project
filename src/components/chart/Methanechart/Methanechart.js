@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import style from "./Methane.module.css";
+import Loading from "../../loading/Loading";
 import { useMethaneFetchData } from "../../api/ClientAPI";
 
 ChartJS.register(
@@ -80,7 +81,7 @@ function MethaneChart() {
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />

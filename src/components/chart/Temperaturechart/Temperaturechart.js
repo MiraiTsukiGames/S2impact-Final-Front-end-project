@@ -1,4 +1,5 @@
 import React from "react";
+import Loading from "../../loading/Loading";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -80,7 +81,7 @@ function TemperatureChart() {
   return (
     <>
       {isLoading ? (
-        <div>Loading...</div>
+        <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
