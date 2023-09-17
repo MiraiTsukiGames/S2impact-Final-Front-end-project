@@ -16,7 +16,7 @@ const CO2 = () => {
       <meta name="author" content="Samanta Mancini"/>
       <meta name="og:title" content="Co2 graph"/>
       <meta name="og:description" content="dioxide carbon data"/>
-      <meta name="og:image" content="assets/img/climate change logo.png"/>
+      <meta name="og:image" content="https://miraitsukigithub.io/src/assets/img/climate change logo.png"/>
       <meta name="twitter:title" content="Co2 graph"/>
       <meta name="twitter:description" content="dioxide carbon data"/>
       <meta name="twitter:image" content="https://miraitsukigithub.io/src/assets/img/climate change logo.png"/>
