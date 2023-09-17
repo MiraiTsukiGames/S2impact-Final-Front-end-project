@@ -7,16 +7,20 @@ import Cards from "../../components/cards/Cards";
 import Hero from "../../components/hero/Hero";
 
 const Home = () => {
-  const Ref = useRef(null);
+  const ref = useRef(null);
 
   const { t } = useTranslation();
 
-  const handleClick = () => {
-    Ref.current?.scrollIntoView({ behavior: "smooth" });
+  const handleScrollUp = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const handleScrollDown = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }
+
   return (
-    <section>
+    <section ref={ref}>
     <Helmet>
       <title>Climate Change Alert</title>
       <meta name="description" content="Climate Change Alert graphs" />
@@ -33,9 +37,10 @@ const Home = () => {
         <div className="home">
           <Hero title={t("title")} description={t("description1")} />
         </div>
-        <ButtonAnimation onClick={handleClick} />
+        <ButtonAnimation onClick={handleScrollDown} />
       </div>
-      <Cards scroll={Ref} />
+      <Cards scroll={ref} />
+      <ButtonAnimation onClick={handleScrollUp} />
     </section>
   );
 };
