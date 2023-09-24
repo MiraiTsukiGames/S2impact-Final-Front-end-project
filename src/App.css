@@ -7,12 +7,12 @@
   font-family: "Montserrat";
 }
 
-#Dark {
+#dark {
   background-color: #292c35;
   color: white;
 }
 
-#Light {
+#light {
   color: #011d36;
   background-color: #e7e7e7;
 }
@@ -24,8 +24,8 @@
 .label {
   width: 50px;
   height: 25px;
-  top: -95px;
-  left: 45%;
+  top: -30px;
+  left: 10%;
   background-color: #111;
   display: flex;
   border-radius: 50px;
@@ -52,7 +52,7 @@
   transform: translateX(24px);
 }
 
-#Dark .home {
+#dark .home {
   background-color: #292c35;
   width: 80%;
   padding: 20px;
@@ -61,7 +61,7 @@
   border-radius: 5px;
 }
 
-#Light .home {
+#light .home {
   background-color: #e7e7e7;
   width: 80%;
   padding: 20px;
@@ -69,19 +69,19 @@
   border-radius: 5px;
 }
 
-#Dark a {
+#dark a {
   color: white;
 }
 
-#Light a {
+#light a {
   color: #011d36;
 }
 
-#Light .menu {
+#light .menu {
   background-color: #e7e7e7;
 }
 
-#Dark .menu {
+#dark .menu {
   background-color: #292c35;
 }
 
@@ -95,30 +95,37 @@
   font-size: 12px;
 }
 
+span {
+  position: relative;
+  top: -50px;
+  left: 3%;
+  font-size: 18px;
+}
+
 @media only screen and (max-width: 1280px) {
   .label {
-    left: 80%;
+    left: 14%;
   }
 
-  #Light .menu li {
+  #light .menu li {
     border-bottom: 2px solid #011d36;
   }
 
-  #Dark .menu li {
+  #dark .menu li {
     border-bottom: 2px solid #ffffff;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .label {
-    left: 70%;
+    left: 18%;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .label {
-    left: 45%;
-    top: -30px;
+    left: 25%;
+    top: -20px;
     width: 40px;
     height: 15px;
   }
@@ -135,5 +142,10 @@
 
   .Sun {
     font-size: 10px;
+  }
+
+ span {
+    font-size: 10px;
+    top: -40px;
   }
 }

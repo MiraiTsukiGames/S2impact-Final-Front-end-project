@@ -20,8 +20,8 @@ const Home = () => {
   }
 
   return (
-    <section ref={ref}>
-    <Helmet>
+    <>
+      <Helmet>
       <title>Climate Change Alert</title>
       <meta name="description" content="Climate Change Alert graphs" />
       <meta name="keywords" content="allarme cambiamento climatico, cambiamento climatico, climate change" />
@@ -38,6 +38,7 @@ const Home = () => {
       <meta name="twitter:description" content="Climate Change Alert graphs"/>
       <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
+    <section ref={ref}>
       <div className={style.banner}>
         <div className="home">
           <Hero title={t("title")} description={t("description1")} />
@@ -46,9 +47,10 @@ const Home = () => {
       </div>
       <Cards scroll={ref} />
       <div className={style.buttonContainer}>
-      <ButtonAnimation onClick={handleScrollUp} icon="arrowUp" />
+       <ButtonAnimation onClick={handleScrollUp} icon="arrowUp" />
       </div>
     </section>
+    </>
   );
 };
 

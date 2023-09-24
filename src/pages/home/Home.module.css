@@ -17,10 +17,17 @@
 
 .buttonContainer {
   margin-left: 3%;
+  display: none;
 }
 
 @media only screen and (max-width: 1024px) {
   .banner {
     background-image: url("../../assets/img/polarice.jpg");
+  }
+
+  .buttonContainer {
+    display: block;
+    position: fixed;
+    top: 80%;
   }
 }

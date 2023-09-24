@@ -42,6 +42,8 @@ i18next
           polarice: "Polar ice",
           graph: "Graph",
           load: "Load Graph",
+          dark: "Dark Mode",
+          light: "Light Mode",
         },
       },
       it: {
@@ -76,6 +78,8 @@ i18next
           polarice: "Ghiaccio artico",
           graph: "Grafico",
           load: "Carica Grafico",
+          dark: "Modalità Scura",
+          light: "Modalità Chiara"
         },
       },
     },

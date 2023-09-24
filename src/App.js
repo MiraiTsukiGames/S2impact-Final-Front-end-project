@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { useThemeContext } from "./context/theme/Theme";
+import { useTranslation } from "react-i18next";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
@@ -14,17 +15,19 @@ import "./App.css";
 
 const App = () => {
   // Get the current theme from the context
-  const { contextTheme, setContextTheme } = useThemeContext();
+  const { contextTheme, setContextTheme, mode, setMode } = useThemeContext();
+  const { t } = useTranslation();
+
   // State for the switch value
   const [checked, setChecked] = useState(false);
 
   // Handler for the switch change event
   const handleSwitch = () => {
-    // Change the theme in the context
-    setContextTheme((prevTheme) => (prevTheme === "Dark" ? "Light" : "Dark"));
     // Update the switch value
     setChecked(!checked);
-  };
+      setContextTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+      setMode((prevMode) => (prevMode === t("dark") ? t("light") : t("dark")));
+    };
 
   return (
     <div className="App" id={contextTheme}>
@@ -41,8 +44,10 @@ const App = () => {
       <label htmlFor="checkbox" className="label">
         <BsMoonStarsFill className="Moon" />
         <BsFillSunFill className="Sun" />
-        <div className="ball"></div>
+        <div className="ball">
+        </div>
       </label>
+      <span>{mode}</span>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
