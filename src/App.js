@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <div className="App" id={contextTheme}>
-      <Navbar />
+      <Navbar t={t} />
       <input
         type="checkbox"
         className="checkbox"
@@ -50,14 +50,14 @@ const App = () => {
       <span>{mode}</span>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/co2" element={<CO2 />} />
-          <Route path="/methane" element={<Methane />} />
-          <Route path="/no2" element={<NO2 />} />
-          <Route path="/polarice" element={<PolarIce />} />
-          <Route path="/temperature" element={<Temperature />} />
+          <Route path="/" element={<Home t={t} />} />
+          <Route path="/co2" element={<CO2 t={t} />} />
+          <Route path="/methane" element={<Methane t={t} />} />
+          <Route path="/no2" element={<NO2 t={t} />} />
+          <Route path="/polarice" element={<PolarIce t={t} />} />
+          <Route path="/temperature" element={<Temperature t={t} />} />
         </Routes>
-        <Footer />
+        <Footer t={t} />
       </main>
     </div>
   );

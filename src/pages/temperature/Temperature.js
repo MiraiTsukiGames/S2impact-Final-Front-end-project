@@ -2,15 +2,13 @@ import React from "react";
 import TemperatureChart from "../../components/chart/Temperaturechart/Temperaturechart";
 import { Helmet } from "react-helmet-async";
 import Hero from "../../components/hero/Hero";
-import { useTranslation } from "react-i18next";
 import style from "./Temperature.module.css";
 
-const Temperature = () => {
-  const { t } = useTranslation();
+const Temperature = ({ t }) => {
 
   return (
-    <section className={style.container}>
-    <Helmet>
+    <>
+     <Helmet>
       <title>{t("Temperature")} {t("title3")}</title>
       <meta name="description" content="temperature data" />
       <meta name="keywords" content="temperature, temperature grafico, temperature chart" />
@@ -27,6 +25,8 @@ const Temperature = () => {
       <meta name="twitter:description" content="temperature data"/>
       <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
+
+    <section className={style.container}>
     <div className={style.heroContainer}>
       <Hero
         title={t("Temperature")}
@@ -35,6 +35,7 @@ const Temperature = () => {
       </div>
       <TemperatureChart />
     </section>
+    </>
   );
 };
 

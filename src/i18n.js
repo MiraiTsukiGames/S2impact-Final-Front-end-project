@@ -44,6 +44,7 @@ i18next
           load: "Load Graph",
           dark: "Dark Mode",
           light: "Light Mode",
+          text: "Contact me",
         },
       },
       it: {
@@ -79,7 +80,8 @@ i18next
           graph: "Grafico",
           load: "Carica Grafico",
           dark: "Modalità Scura",
-          light: "Modalità Chiara"
+          light: "Modalità Chiara",
+          text: "Contattami",
         },
       },
     },

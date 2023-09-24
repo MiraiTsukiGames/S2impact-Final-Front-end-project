@@ -2,15 +2,13 @@ import React from "react";
 import PolarIceChart from "../../components/chart/Polaricechart/Polaricechart";
 import { Helmet } from "react-helmet-async";
 import Hero from "../../components/hero/Hero";
-import { useTranslation } from "react-i18next";
 import style from "./Polarice.module.css";
 
-const PolarIce = () => {
-  const { t } = useTranslation();
+const PolarIce = ({ t }) => {
 
   return (
-    <section className={style.container}>
-    <Helmet>
+    <>
+      <Helmet>
       <title>{t("polarice")} {t("title3")}</title>
       <meta name="description" content="arctic data" />
       <meta name="keywords" content="arctic chart, arctic, grafico ghiaccio artico, ghiaccio artico" />
@@ -27,11 +25,14 @@ const PolarIce = () => {
       <meta name="twitter:description" content="arctic data"/>
       <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
+    
+    <section className={style.container}>
     <div className={style.heroContainer}>
       <Hero title={t("polarice")} description={t("polaricedescription")} />
       </div>
       <PolarIceChart />
     </section>
+    </>
   );
 };
 

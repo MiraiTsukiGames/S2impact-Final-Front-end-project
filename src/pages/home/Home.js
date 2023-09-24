@@ -1,16 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
 import ButtonAnimation from "../../components/button/ButtonAnimation";
-import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import style from "./Home.module.css";
 import Cards from "../../components/cards/Cards";
 import Hero from "../../components/hero/Hero";
 
-const Home = () => {
+const Home = ({ t }) => {
   const ref = useRef(null);
   const [scrollTop, setScrollTop] = useState(0);
-
-  const { t } = useTranslation();
 
   const handleScrollUp = () => {
     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });

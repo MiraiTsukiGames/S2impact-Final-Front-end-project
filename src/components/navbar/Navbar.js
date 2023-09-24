@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { changeLanguage } from "i18next";
-import { useTranslation } from "react-i18next";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../../assets/img/climatelogo.png";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ t }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation();
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);

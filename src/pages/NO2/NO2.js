@@ -1,15 +1,13 @@
 import React from "react";
 import No2Chart from "../../components/chart/NO2chart/No2chart";
 import { Helmet } from "react-helmet-async";
-import { useTranslation } from "react-i18next";
 import Hero from "../../components/hero/Hero";
 import style from "./NO2.module.css";
 
-const NO2 = () => {
-  const { t } = useTranslation();
+const NO2 = ({ t }) => {
 
   return (
-    <section className={style.container}>
+    <>
     <Helmet>
       <title>NO2 {t("title3")}</title>
       <meta name="description" content="nitrous data" />
@@ -27,11 +25,13 @@ const NO2 = () => {
       <meta name="twitter:description" content="nitrous data"/>
       <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
+    <section className={style.container}>
     <div className={style.heroContainer}>
       <Hero title={"NO2"} description={t("no2description")} />
       </div>
       <No2Chart />
     </section>
+    </>
   );
 };
 
