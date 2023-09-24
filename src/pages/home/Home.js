@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ButtonAnimation from "../../components/button/ButtonAnimation";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
@@ -8,6 +8,7 @@ import Hero from "../../components/hero/Hero";
 
 const Home = () => {
   const ref = useRef(null);
+  const [scrollTop, setScrollTop] = useState(0);
 
   const { t } = useTranslation();
 
@@ -18,6 +19,18 @@ const Home = () => {
   const handleScrollDown = () => {
     ref.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollTop(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -46,7 +59,7 @@ const Home = () => {
         <ButtonAnimation onClick={handleScrollDown} icon="arrowDown" />
       </div>
       <Cards scroll={ref} />
-      <div className={style.buttonContainer}>
+      <div className={`${style.buttonContainer} ${scrollTop > 0 ? "show" : "hide"}`}>
        <ButtonAnimation onClick={handleScrollUp} icon="arrowUp" />
       </div>
     </section>
