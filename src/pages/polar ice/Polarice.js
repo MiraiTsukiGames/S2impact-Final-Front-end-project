@@ -13,19 +13,7 @@ const PolarIce = ({ t }) => {
       <meta name="description" content="arctic data" />
       <meta name="keywords" content="arctic chart, arctic, grafico ghiaccio artico, ghiaccio artico" />
       <meta name="author" content="Samanta Mancini"/>
-      <meta name="og:locale" content="it_IT"/>
-      <meta name="og:type" content="website"/>
-      <meta name="og:title" content="Polar ice data"/>
-      <meta name="og:description" content="arctic data"/>
-      <meta property="og:site_name" content="Climate Change Alert"/>
-      <meta name="og:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
-      <meta name="twitter:card" content="summary"/>
-      <meta name="twitter:site" content="@Climate Change Alert"/>
-      <meta name="twitter:title" content="Polar ice data"/>
-      <meta name="twitter:description" content="arctic data"/>
-      <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
-    
     <section className={style.container}>
     <div className={style.heroContainer}>
       <Hero title={t("polarice")} description={t("polaricedescription")} />
