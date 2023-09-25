@@ -35,18 +35,21 @@ const Home = ({ t }) => {
       <title>Climate Change Alert</title>
       <meta name="description" content="Climate Change Alert graphs" />
       <meta name="keywords" content="allarme cambiamento climatico, cambiamento climatico, climate change" />
-      <meta name="author" content="Samanta Mancini"/>
-      <meta name="og:locale" content="it_IT"/>
-      <meta name="og:type" content="website"/>
-      <meta name="og:title" content="Climate Change Alert"/>
-      <meta name="og:description" content="Climate Change Alert graphs"/>
-      <meta property="og:site_name" content="Climate Change Alert"/>
-      <meta name="og:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
-      <meta name="twitter:card" content="summary"/>
-      <meta name="twitter:site" content="@Climate Change Alert"/>
-      <meta name="twitter:title" content="Climate Change Alert"/>
-      <meta name="twitter:description" content="Climate Change Alert graphs"/>
-      <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
+      <meta name="author" content="Samanta Mancini" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@”Climate_Change_Alert”" />
+      <meta name="twitter:title" content="Climate_Change_Alert" />
+      <meta name="twitter:description" content="Climate Change Alert graphs" />
+      <meta name="twitter:creator" content="@Samanta_Mancini" />
+      <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png" />
+      <meta property="og:description" content="Climate Change Alert graphs" />
+      <meta property="og:locale" content="it_IT" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/"/>
+      <meta property="og:site_name" content="Climate Change Alert" />
+      <meta property="og:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/logo.png" />
+      <link rel="canonical" href="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/" />
+      <meta property="og:title" content="Climate Change Alert" />
     </Helmet>
     <section ref={ref}>
       <div className={style.banner}>
