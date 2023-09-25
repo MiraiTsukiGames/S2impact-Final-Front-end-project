@@ -84,9 +84,7 @@ function Chart() {
   return (
     <>
       {isLoading ? (
-        <div>
-        <Loading />
-        </div>
+        <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
