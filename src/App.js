@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { useThemeContext } from "./context/theme/Theme";
@@ -15,8 +15,9 @@ import "./App.css";
 
 const App = () => {
   // Get the current theme from the context
-  const { contextTheme, setContextTheme, mode, setMode } = useThemeContext();
-  const { t } = useTranslation();
+  const { contextTheme, setContextTheme } = useThemeContext();
+  const { t, i18n } = useTranslation();
+  const [mode, setMode] = useState(t("light"));
 
   // State for the switch value
   const [checked, setChecked] = useState(false);
@@ -28,6 +29,10 @@ const App = () => {
       setContextTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
       setMode((prevMode) => (prevMode === t("dark") ? t("light") : t("dark")));
     };
+
+    useEffect(() => {
+      setMode(t(contextTheme));
+    }, [contextTheme, t, i18n.language, setMode]);
 
   return (
     <div className="App" id={contextTheme}>
