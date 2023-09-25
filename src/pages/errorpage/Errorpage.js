@@ -6,7 +6,7 @@ export default function ErrorPage() {
   return (
     <>
     <Helmet>
-    <title>Page not found</title>
+    <title>Error-404</title>
   </Helmet>
     <section>
       <div className="banner">
