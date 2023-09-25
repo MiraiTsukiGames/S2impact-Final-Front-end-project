@@ -25,7 +25,7 @@
   width: 50px;
   height: 25px;
   top: -30px;
-  left: 10%;
+  left: 12%;
   background-color: #111;
   display: flex;
   border-radius: 50px;
@@ -124,7 +124,7 @@ span {
 
 @media only screen and (max-width: 576px) {
   .label {
-    left: 25%;
+    left: 28%;
     top: -20px;
     width: 40px;
     height: 15px;
