@@ -26,11 +26,6 @@
     background-image: url("../../assets/img/polarice.jpg");
   }
 
-  .buttonContainer {
-    position: fixed;
-    top: 80%;
-  }
-
   .show {
     display: block;
     margin-left: 3%;
