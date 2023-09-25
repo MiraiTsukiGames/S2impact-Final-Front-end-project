@@ -13,17 +13,6 @@ const NO2 = ({ t }) => {
       <meta name="description" content="nitrous data" />
       <meta name="keywords" content="no2, no2 grafico, no2 chart" />
       <meta name="author" content="Samanta Mancini"/>
-      <meta name="og:locale" content="it_IT"/>
-      <meta name="og:type" content="website"/>
-      <meta name="og:title" content="No2 data"/>
-      <meta name="og:description" content="nitrous data"/>
-      <meta property="og:site_name" content="Climate Change Alert"/>
-      <meta name="og:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
-      <meta name="twitter:card" content="summary"/>
-      <meta name="twitter:site" content="@Climate Change Alert"/>
-      <meta name="twitter:title" content="No2 data"/>
-      <meta name="twitter:description" content="nitrous data"/>
-      <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
     </Helmet>
     <section className={style.container}>
     <div className={style.heroContainer}>
