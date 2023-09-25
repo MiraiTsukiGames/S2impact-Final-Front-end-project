@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <div className="App" id={contextTheme}>
-      <Navbar t={t} />
+      <Navbar t={t} i18n={i18n}/>
       <input
         type="checkbox"
         className="checkbox"

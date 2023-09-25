@@ -5,7 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../../assets/img/climatelogo.png";
 import "./Navbar.css";
 
-export default function Navbar({ t }) {
+export default function Navbar({ t, i18n }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -17,10 +17,10 @@ export default function Navbar({ t }) {
     <nav className={`navbar ${isOpen ? "sidebar" : ""}`}>
       <div className="items">
         <p>{t("selectALanguage")}</p>
-        <button onClick={() => changeLanguage("it")} className="button">
+        <button onClick={() => changeLanguage("it")} className={i18n.language === "it" ? "button active" : "button"}>
           Italiano
         </button>
-        <button onClick={() => changeLanguage("en")} className="button">
+        <button onClick={() => changeLanguage("en")} className={i18n.language === "en" ? "button active" : "button"}>
           English
         </button>
       </div>
