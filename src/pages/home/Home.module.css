@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.buttonContainer {
+.hide {
   margin-left: 3%;
   display: none;
 }
@@ -26,12 +26,18 @@
     background-image: url("../../assets/img/polarice.jpg");
   }
 
-  .buttonContainer .show {
-    display: block;
+  .buttonContainer {
     position: fixed;
+    top: 80%;
   }
 
-  .buttonContainer .hide {
+  .show {
+    display: block;
+    margin-left: 3%;
+  }
+
+  .hide {
     display: none;
+    margin-left: 3%;
   }
 }
