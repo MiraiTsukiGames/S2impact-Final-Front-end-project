@@ -11,6 +11,7 @@ import Methane from "./pages/methane/Methane";
 import NO2 from "./pages/NO2/NO2";
 import PolarIce from "./pages/polar ice/Polarice";
 import Temperature from "./pages/temperature/Temperature";
+import ErrorPage from "./pages/errorpage/Errorpage";
 import "./App.css";
 
 const App = () => {
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/no2" element={<NO2 t={t} />} />
           <Route path="/polarice" element={<PolarIce t={t} />} />
           <Route path="/temperature" element={<Temperature t={t} />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer t={t} />
       </main>
