@@ -12,17 +12,6 @@ const CO2 = ({ t }) => {
     <meta name="description" content="dioxide carbon data" />
     <meta name="keywords" content="co2, grafico, co2 chart" />
     <meta name="author" content="Samanta Mancini"/>
-    <meta name="og:locale" content="it_IT"/>
-    <meta name="og:type" content="website"/>
-    <meta name="og:title" content="Co2"/>
-    <meta name="og:description" content="dioxide carbon data"/>
-    <meta property="og:site_name" content="Climate Change Alert"/>
-    <meta name="og:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:site" content="@Climate Change Alert"/>
-    <meta name="twitter:title" content="@Co2 data"/>
-    <meta name="twitter:description" content="dioxide carbon data"/>
-    <meta name="twitter:image" content="https://miraitsukigames.github.io/S2impact-Final-Front-end-project/src/assets/img/climatelogo.png"/>
   </Helmet>
     <section className={style.container}>
       <div className={style.heroContainer}>
