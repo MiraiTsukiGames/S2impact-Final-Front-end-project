@@ -7,20 +7,25 @@
   font-family: "Montserrat";
 }
 
+/* Dark styling */
 #dark {
   background-color: #292c35;
   color: white;
 }
 
+/* Light styling */
 #light {
   color: #011d36;
   background-color: #e7e7e7;
 }
+
+/* Checkbox styling */
 .checkbox {
   opacity: 0;
   position: absolute;
 }
 
+/* Label styling */
 .label {
   width: 50px;
   height: 25px;
@@ -37,6 +42,7 @@
   cursor: pointer;
 }
 
+/* Ball styling */
 .ball {
   width: 20px;
   height: 20px;
@@ -52,6 +58,7 @@
   transform: translateX(24px);
 }
 
+/* Dark home styling */
 #dark .home {
   background-color: #292c35;
   width: 80%;
@@ -61,6 +68,7 @@
   border-radius: 5px;
 }
 
+/* Light home styling */
 #light .home {
   background-color: #e7e7e7;
   width: 80%;
@@ -69,32 +77,39 @@
   border-radius: 5px;
 }
 
+/* Dark a styling */
 #dark a {
   color: white;
 }
 
+/* Light a styling */
 #light a {
   color: #011d36;
 }
 
+/* Light menu styling */
 #light .menu {
   background-color: #e7e7e7;
 }
 
+/* Dark menu styling */
 #dark .menu {
   background-color: #292c35;
 }
 
+/* Moon icon styling */
 .Moon {
   color: white;
   font-size: 12px;
 }
 
+/* Sun icon styling */
 .Sun {
   color: yellow;
   font-size: 12px;
 }
 
+/* Span styling */
 span {
   position: relative;
   top: -50px;
@@ -102,27 +117,35 @@ span {
   font-size: 18px;
 }
 
+/* Media query max-width 1280px */
 @media only screen and (max-width: 1280px) {
+  /* Label position */
   .label {
     left: 14%;
   }
 
+  /* Light mode menu links styling */
   #light .menu li {
     border-bottom: 2px solid #011d36;
   }
-
+ /* Dark mode menu links styling */
   #dark .menu li {
     border-bottom: 2px solid #ffffff;
   }
 }
 
+/* Media query max-width 1024px */
 @media only screen and (max-width: 1024px) {
+  /* Label position */
   .label {
     left: 18%;
   }
 }
 
+/* Media query max-width 576px */
 @media only screen and (max-width: 576px) {
+
+/* Label size and position */
   .label {
     left: 28%;
     top: -20px;
@@ -130,20 +153,24 @@ span {
     height: 15px;
   }
 
+/* Ball font-size */
   .ball {
     width: 12px;
     height: 12px;
     top: 2px;
   }
 
+/* Moon font-size */
   .Moon {
     font-size: 10px;
   }
 
+/* Sun font-size */
   .Sun {
     font-size: 10px;
   }
 
+/* Span font-size and position */
  span {
     font-size: 10px;
     top: -40px;
