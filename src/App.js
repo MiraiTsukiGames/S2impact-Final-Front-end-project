@@ -37,7 +37,9 @@ const App = () => {
 
   return (
     <div className="App" id={contextTheme}>
+     {/* Navbar */}
       <Navbar t={t} i18n={i18n}/>
+      {/* Checkbox */}
       <input
         type="checkbox"
         className="checkbox"
@@ -47,14 +49,17 @@ const App = () => {
         // checking checked prop
         checked={checked}
       />
+      {/* Switch label */}
       <label htmlFor="checkbox" className="label">
         <BsMoonStarsFill className="Moon" />
         <BsFillSunFill className="Sun" />
         <div className="ball">
         </div>
       </label>
+      {/* Switch span */}
       <span>{mode}</span>
       <main>
+      {/* Page routes */}
         <Routes>
           <Route path="/" element={<Home t={t} />} />
           <Route path="/co2" element={<CO2 t={t} />} />
@@ -64,6 +69,7 @@ const App = () => {
           <Route path="/temperature" element={<Temperature t={t} />} />
           <Route path="*" element={<ErrorPage t={t} />} />
         </Routes>
+         {/* Footer */}
         <Footer t={t} />
       </main>
     </div>
