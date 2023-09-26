@@ -1,9 +1,11 @@
+/* Subtitle styling */
 .subtitle {
   font-size: 40px;
   text-align: center;
   margin-top: 20px;
 }
 
+/* Card container styling */
 .cardContainer {
   display: flex;
   margin-top: 20px;
@@ -12,6 +14,7 @@
   max-width: auto;
 }
 
+/* Card body styling */
 .cardBody {
   display: flex;
   flex-direction: column;
@@ -30,16 +33,19 @@
   margin-right: 2%;
 }
 
+/* Card body hover styling */
 .cardBody:hover {
   transform: translateY(-5%);
 }
 
+/* Title Card styling */
 .titleCard {
   color: #011d36;
   font-size: 28px;
   text-align: center;
 }
 
+/* Card description styling */
 .cardDescription {
   font-size: 18px;
   text-align: center;
@@ -48,6 +54,7 @@
   color: #011d36;
 }
 
+/* Media query min width 1281px */
 @media (min-width: 1281px) {
   .cardContainer {
     justify-content: flex-start;
