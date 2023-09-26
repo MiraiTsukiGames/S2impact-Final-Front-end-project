@@ -1,3 +1,4 @@
+/* Animation button styling */
 .animation {
   margin-top: 40px;
   background-color: rgb(255, 102, 0);
@@ -10,10 +11,12 @@
   animation: moveUpDown 1.5s infinite;
 }
 
+/* Animation button hover styling */
 .animation:hover {
   cursor: pointer;
 }
 
+/* Animation Up down */
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);
