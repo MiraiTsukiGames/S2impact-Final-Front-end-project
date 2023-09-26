@@ -46,7 +46,7 @@ const Home = ({ t }) => {
         <ButtonAnimation onClick={handleScrollDown} icon="arrowDown" />
       </div>
       <Cards scroll={ref} />
-      <div className={`${scrollTop > 0 ? "style.show" : "style.hide"}`}>
+      <div className={`${scrollTop > 0 ? style.show : style.hide}`}>
        <ButtonAnimation onClick={handleScrollUp} icon="arrowUp" />
       </div>
     </section>
