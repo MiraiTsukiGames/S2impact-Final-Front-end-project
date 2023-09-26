@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
-import ButtonAnimation from "../../components/button/ButtonAnimation";
+import ButtonAnimation from "../../components/button/ButtonAnimation.js";
 import { Helmet } from "react-helmet-async";
-import Cards from "../../components/cards/Cards";
-import Hero from "../../components/hero/Hero";
+import Cards from "../../components/cards/Cards.js";
+import Hero from "../../components/hero/Hero.js";
 import style from "./Home.module.css";
 
 
