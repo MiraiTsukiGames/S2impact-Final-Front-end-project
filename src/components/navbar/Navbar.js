@@ -8,6 +8,7 @@ import "./Navbar.css";
 export default function Navbar({ t, i18n }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Toggle navabar function
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
@@ -16,15 +17,15 @@ export default function Navbar({ t, i18n }) {
     //navbar section
     <nav className={`navbar ${isOpen ? "sidebar" : ""}`}>
       <div className="items">
-        <p>{t("selectALanguage")}</p>
+        <p>{t("selectALanguage")}</p> {/* Select a Language translation*/}
         <button onClick={() => changeLanguage("it")} className={i18n.language === "it" ? "button-active" : "button"}>
           Italiano
-        </button>
+        </button> {/* Italian button */}
         <button onClick={() => changeLanguage("en")} className={i18n.language === "en" ? "button-active" : "button"}>
           English
-        </button>
+        </button> {/* English button */}
       </div>
-      <div className="navbar-container">
+      <div className="navbar-container"> {/* Logo render */}
         <img src={Logo} className="brand-name" alt="logo" />
         {/*hamburger button*/}
         <button
@@ -34,6 +35,7 @@ export default function Navbar({ t, i18n }) {
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
+        {/* Menu list */}
         <ul className={`menu ${isOpen ? "show" : ""}`}>
           <li>
             <Link to="/">Home</Link>
