@@ -3,10 +3,13 @@ import Co2chart from "../../components/chart/CO2chart/Co2chart";
 import { Helmet } from 'react-helmet-async';
 import Hero from "../../components/hero/Hero";
 import style from "./CO2.module.css";
+
+
 const CO2 = ({ t }) => {
 
   return (
     <>
+    {/* Metadata and title tag */}
     <Helmet>
     <title>Co2 {t("title3")}</title>
     <meta name="description" content="dioxide carbon data" />
@@ -15,8 +18,10 @@ const CO2 = ({ t }) => {
   </Helmet>
     <section className={style.container}>
       <div className={style.heroContainer}>
+      {/* Render the Hero component with title and description */}
         <Hero title={"CO2"} description={t("co2description")} />
       </div>
+      {/* Render the Co2chart component */}
       <Co2chart />
     </section>
     </>
