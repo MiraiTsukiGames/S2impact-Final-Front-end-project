@@ -9,8 +9,8 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { useFetchData } from "../../api/ClientAPI";
-import Loading from "../../loading/Loading";
+import { useFetchData } from "../../api/ClientAPI.js";
+import Loading from "../../loading/Loading.js";
 import style from "./Polarice.module.css";
 
 ChartJS.register(
@@ -23,13 +23,17 @@ ChartJS.register(
 );
 
 function PolarIceChart() {
-  const { data: polarIceData, isLoading: polarIceLoading } = useFetchData("https://global-warming.org/api/arctic-api");
-  let area = polarIceData?.arcticData?.map((item) => `${item.area}`);
-  let extent = polarIceData?.arcticData?.map((item) => `${item.extent}`);
-  let arcticTime = polarIceData?.arcticData?.map(
+  const { data, isLoading } = useFetchData("https://global-warming.org/api/arctic-api");
+  let area = data?.arcticData?.map((item) => `${item.area}`);
+  let extent = data?.arcticData?.map((item) => `${item.extent}`);
+  let arcticTime = data?.arcticData?.map(
     (item) => `${item.year}/${item.month}`,
   );
-  let rank = polarIceData?.arcticData?.map((item) => `${item.rank}`);
+  let rank = data?.arcticData?.map((item) => `${item.rank}`);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   const chartData = {
     labels: arcticTime,
@@ -90,13 +94,9 @@ function PolarIceChart() {
 
   return (
     <>
-      {polarIceLoading ? (
-        <div><Loading /></div>
-      ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>
-      )}
     </>
   );
 }

@@ -9,9 +9,10 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import { useFetchData } from "../../api/ClientAPI.js";
+import Loading from "../../loading/Loading.js";
 import style from "./Methane.module.css";
-import Loading from "../../loading/Loading";
-import { useFetchData } from "../../api/ClientAPI";
+
 
 ChartJS.register(
   CategoryScale,
@@ -23,10 +24,14 @@ ChartJS.register(
 );
 
 function MethaneChart() {
-  const { data: methaneData, isLoading: methaneLoading } = useFetchData("https://global-warming.org/api/methane-api");
-  let trend = methaneData?.methane?.map((item) => item.trend);
-  let average = methaneData?.methane?.map((item) => item.average);
-  let methaneTime = methaneData?.methane?.map((item) => `${item.date}`);
+  const { data, isLoading } = useFetchData("https://global-warming.org/api/methane-api");
+  let trend = data?.methane?.map((item) => item.trend);
+  let average = data?.methane?.map((item) => item.average);
+  let methaneTime = data?.methane?.map((item) => `${item.date}`);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   const chartData = {
     labels: methaneTime,
@@ -80,13 +85,9 @@ function MethaneChart() {
 
   return (
     <>
-      {methaneLoading ? (
-        <div><Loading /></div>
-      ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>
-      )}
     </>
   );
 }

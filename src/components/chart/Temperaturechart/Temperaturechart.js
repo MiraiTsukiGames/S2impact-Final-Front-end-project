@@ -1,5 +1,4 @@
 import React from "react";
-import Loading from "../../loading/Loading";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,7 +9,8 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { useFetchData } from "../../api/ClientAPI";
+import { useFetchData } from "../../api/ClientAPI.js";
+import Loading from "../../loading/Loading.js";
 import style from "./Temperature.module.css";
 
 ChartJS.register(
@@ -23,10 +23,14 @@ ChartJS.register(
 );
 
 function TemperatureChart() {
-  const { data: temperatureData, isLoading: temperatureLoading } = useFetchData("https://global-warming.org/api/temperature-api");
-  let temperatureTime = temperatureData?.result?.map((item) => `${item.time}`);
-  let station = temperatureData?.result?.map((item) => `${item.station}`);
-  let land = temperatureData?.result?.map((item) => `${item.land}`);
+  const { data, isLoading } = useFetchData("https://global-warming.org/api/temperature-api");
+  let temperatureTime = data?.result?.map((item) => `${item.time}`);
+  let station = data?.result?.map((item) => `${item.station}`);
+  let land = data?.result?.map((item) => `${item.land}`);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   const chartData = {
     labels: temperatureTime,
@@ -80,13 +84,9 @@ function TemperatureChart() {
 
   return (
     <>
-      {temperatureLoading ? (
-        <div><Loading /></div>
-      ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>
-      )}
     </>
   );
 }

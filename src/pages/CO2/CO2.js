@@ -1,7 +1,7 @@
 import React from "react";
-import Co2chart from "../../components/chart/CO2chart/Co2chart";
+import Co2chart from "../../components/chart/CO2chart/Co2chart.js";
 import { Helmet } from 'react-helmet-async';
-import Hero from "../../components/hero/Hero";
+import Hero from "../../components/hero/Hero.js";
 import style from "./CO2.module.css";
 
 

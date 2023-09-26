@@ -9,8 +9,8 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { useFetchData } from "../../api/ClientAPI";
-import Loading from "../../loading/Loading";
+import { useFetchData } from "../../api/ClientAPI.js";
+import Loading from "../../loading/Loading.js";
 import style from "./Co2.module.css";
 
 ChartJS.register(
@@ -23,12 +23,16 @@ ChartJS.register(
 );
 
 function Chart() {
-  const { data: co2Data, isLoading: co2Loading } = useFetchData("https://global-warming.org/api/co2-api");
-  let trend = co2Data?.co2?.map((item) => item.trend);
-  let cycle = co2Data?.co2?.map((item) => item.cycle);
-  let co2Time = co2Data?.co2?.map(
+  const { data, isLoading } = useFetchData("https://global-warming.org/api/co2-api");
+  let trend = data?.co2?.map((item) => item.trend);
+  let cycle = data?.co2?.map((item) => item.cycle);
+  let co2Time = data?.co2?.map(
     (item) => `${item.year}/${item.month}/${item.day}`,
   );
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   const chartData = {
     labels: co2Time,
@@ -83,13 +87,9 @@ function Chart() {
 
   return (
     <>
-      {co2Loading ? (
-        <div><Loading /></div>
-      ) : (
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>
-      )}
     </>
   );
 }
