@@ -8,7 +8,9 @@ const PolarIce = ({ t }) => {
 
   return (
     <>
+    {/* Metadata and title tag */}
       <Helmet>
+      {/* Set the title for the page using translation */}
       <title>{t("polarice")} {t("title3")}</title>
       <meta name="description" content="arctic data" />
       <meta name="keywords" content="arctic chart, arctic, grafico ghiaccio artico, ghiaccio artico" />
@@ -16,8 +18,10 @@ const PolarIce = ({ t }) => {
     </Helmet>
     <section className={style.container}>
     <div className={style.heroContainer}>
+    {/* Render the Hero component with translated title and description */}
       <Hero title={t("polarice")} description={t("polaricedescription")} />
       </div>
+      {/* Render the PolarIceChart component */}
       <PolarIceChart />
     </section>
     </>
