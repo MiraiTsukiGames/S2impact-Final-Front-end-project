@@ -6,7 +6,7 @@ i18next
   .use(initReactI18next)
   .use(I18nextBrowserLanguageDetector)
   .init({
-    debug: true,
+    debug: false,
     supportedLngs: ["en", "it"],
     fallbackLng: "en",
     resources: {
