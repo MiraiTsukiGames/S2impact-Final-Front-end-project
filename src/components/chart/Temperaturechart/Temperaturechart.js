@@ -10,8 +10,8 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import style from "./Temperature.module.css";
 import { useTemperatureFetchData } from "../../api/ClientAPI";
+import style from "./Temperature.module.css";
 
 ChartJS.register(
   CategoryScale,
