@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
 }
+
+/* Background image for the banner */
 .banner {
   background-image: url("../../assets/img/globalwarming.jpg");
   background-size: cover;
@@ -15,12 +17,14 @@
   align-items: center;
 }
 
-
+/* Media query for screen width up to 1024px */
 @media only screen and (max-width: 1024px) {
   .banner {
+    /* Change background image for smaller screens */
     background-image: url("../../assets/img/polarice.jpg");
   }
 
+  /* Show the element and position it on the screen */
   .show {
     position: fixed;
     top: 50%;
@@ -28,6 +32,7 @@
     margin-left: 3%;
   }
 
+  /* Hide the element */
   .hide {
     display: none;
     margin-left: 3%;
