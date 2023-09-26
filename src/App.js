@@ -62,7 +62,7 @@ const App = () => {
           <Route path="/no2" element={<NO2 t={t} />} />
           <Route path="/polarice" element={<PolarIce t={t} />} />
           <Route path="/temperature" element={<Temperature t={t} />} />
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage t={t} />} />
         </Routes>
         <Footer t={t} />
       </main>

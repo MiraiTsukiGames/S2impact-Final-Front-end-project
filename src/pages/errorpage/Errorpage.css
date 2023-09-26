@@ -23,3 +23,13 @@
   .error {
     font-size: 50px;
   }
+
+  @media only screen and (max-width: 576px) {
+    .error {
+      font-size: 19px;
+    }
+
+    .text {
+      font-size: 12px;
+    }
+  }
