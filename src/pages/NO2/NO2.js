@@ -1,7 +1,7 @@
 import React from "react";
-import No2Chart from "../../components/chart/NO2chart/No2chart";
+import No2Chart from "../../components/chart/NO2chart/No2chart.js";
 import { Helmet } from "react-helmet-async";
-import Hero from "../../components/hero/Hero";
+import Hero from "../../components/hero/Hero.js";
 import style from "./NO2.module.css";
 
 const NO2 = ({ t }) => {
