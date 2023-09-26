@@ -46,7 +46,7 @@ i18next
           light: "Light Mode",
           text: "Contact me",
           error: "Page could not be found",
-          page404: "This page could not be found."
+          page404: "This page could not be found.",
         },
       },
       it: {
@@ -85,7 +85,7 @@ i18next
           light: "Modalità Chiara",
           text: "Contattami",
           error: "La pagina non è stata trovata",
-          page404: "Ci dispiace, la pagina richiesta non è stata trovata."
+          page404: "Ci dispiace, la pagina richiesta non è stata trovata.",
         },
       },
     },

@@ -23,8 +23,9 @@ ChartJS.register(
 );
 
 function Chart() {
-  const { data, isLoading } = useFetchData("https://global-warming.org/api/co2-api");
-
+  const { data, isLoading } = useFetchData(
+    "https://global-warming.org/api/co2-api",
+  );
 
   // Extracting necessary data from the fetched data
   let trend = data?.co2?.map((item) => item.trend);
@@ -93,9 +94,9 @@ function Chart() {
   return (
     <>
       {/*Render chart */}
-        <div className={style.backgroundChart}>
-          <Line data={chartData} options={options} />
-        </div>
+      <div className={style.backgroundChart}>
+        <Line data={chartData} options={options} />
+      </div>
     </>
   );
 }

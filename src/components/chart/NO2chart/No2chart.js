@@ -23,7 +23,9 @@ ChartJS.register(
 );
 
 function No2Chart() {
-  const { data, isLoading } = useFetchData("https://global-warming.org/api/nitrous-oxide-api");
+  const { data, isLoading } = useFetchData(
+    "https://global-warming.org/api/nitrous-oxide-api",
+  );
 
   // Extracting necessary data from the fetched data
   let trend = data?.nitrous?.map((item) => item.trend);
@@ -89,10 +91,10 @@ function No2Chart() {
 
   return (
     <>
-    {/*Render chart */}
-        <div className={style.backgroundChart}>
-          <Line data={chartData} options={options} />
-        </div>
+      {/*Render chart */}
+      <div className={style.backgroundChart}>
+        <Line data={chartData} options={options} />
+      </div>
     </>
   );
 }

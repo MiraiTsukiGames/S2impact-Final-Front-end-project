@@ -128,7 +128,7 @@ span {
   #light .menu li {
     border-bottom: 2px solid #011d36;
   }
- /* Dark mode menu links styling */
+  /* Dark mode menu links styling */
   #dark .menu li {
     border-bottom: 2px solid #ffffff;
   }
@@ -144,8 +144,7 @@ span {
 
 /* Media query max-width 576px */
 @media only screen and (max-width: 576px) {
-
-/* Label size and position */
+  /* Label size and position */
   .label {
     left: 28%;
     top: -20px;
@@ -153,25 +152,25 @@ span {
     height: 15px;
   }
 
-/* Ball font-size */
+  /* Ball font-size */
   .ball {
     width: 12px;
     height: 12px;
     top: 2px;
   }
 
-/* Moon font-size */
+  /* Moon font-size */
   .Moon {
     font-size: 10px;
   }
 
-/* Sun font-size */
+  /* Sun font-size */
   .Sun {
     font-size: 10px;
   }
 
-/* Span font-size and position */
- span {
+  /* Span font-size and position */
+  span {
     font-size: 10px;
     top: -40px;
   }

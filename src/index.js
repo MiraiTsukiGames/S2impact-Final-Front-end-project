@@ -11,12 +11,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <I18nextProvider i18n={i18n}>
-    <HelmetProvider>
-      <ThemeContextProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </ThemeContextProvider>
+      <HelmetProvider>
+        <ThemeContextProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ThemeContextProvider>
       </HelmetProvider>
     </I18nextProvider>
   </React.StrictMode>,

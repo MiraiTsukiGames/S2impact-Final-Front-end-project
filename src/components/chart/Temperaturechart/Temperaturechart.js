@@ -23,7 +23,9 @@ ChartJS.register(
 );
 
 function TemperatureChart() {
-  const { data, isLoading } = useFetchData("https://global-warming.org/api/temperature-api");
+  const { data, isLoading } = useFetchData(
+    "https://global-warming.org/api/temperature-api",
+  );
 
   // Extracting necessary data from the fetched data
   let temperatureTime = data?.result?.map((item) => `${item.time}`);
@@ -89,10 +91,10 @@ function TemperatureChart() {
 
   return (
     <>
-    {/*Render chart */}
-        <div className={style.backgroundChart}>
-          <Line data={chartData} options={options} />
-        </div>
+      {/*Render chart */}
+      <div className={style.backgroundChart}>
+        <Line data={chartData} options={options} />
+      </div>
     </>
   );
 }

@@ -27,18 +27,18 @@ const App = () => {
   const handleSwitch = () => {
     // Update the switch value
     setChecked(!checked);
-      setContextTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
-      setMode((prevMode) => (prevMode === t("dark") ? t("light") : t("dark")));
-    };
+    setContextTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    setMode((prevMode) => (prevMode === t("dark") ? t("light") : t("dark")));
+  };
 
-    useEffect(() => {
-      setMode(t(contextTheme));
-    }, [contextTheme, t, i18n.language, setMode]);
+  useEffect(() => {
+    setMode(t(contextTheme));
+  }, [contextTheme, t, i18n.language, setMode]);
 
   return (
     <div className="App" id={contextTheme}>
-     {/* Navbar */}
-      <Navbar t={t} i18n={i18n}/>
+      {/* Navbar */}
+      <Navbar t={t} i18n={i18n} />
       {/* Checkbox */}
       <input
         type="checkbox"
@@ -53,13 +53,12 @@ const App = () => {
       <label htmlFor="checkbox" className="label">
         <BsMoonStarsFill className="Moon" />
         <BsFillSunFill className="Sun" />
-        <div className="ball">
-        </div>
+        <div className="ball"></div>
       </label>
       {/* Switch span */}
       <span>{mode}</span>
       <main>
-      {/* Page routes */}
+        {/* Page routes */}
         <Routes>
           <Route path="/" element={<Home t={t} />} />
           <Route path="/co2" element={<CO2 t={t} />} />
@@ -69,7 +68,7 @@ const App = () => {
           <Route path="/temperature" element={<Temperature t={t} />} />
           <Route path="*" element={<ErrorPage t={t} />} />
         </Routes>
-         {/* Footer */}
+        {/* Footer */}
         <Footer t={t} />
       </main>
     </div>

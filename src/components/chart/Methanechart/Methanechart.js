@@ -13,7 +13,6 @@ import { useFetchData } from "../../api/ClientAPI.js";
 import Loading from "../../loading/Loading.js";
 import style from "./Methane.module.css";
 
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -24,7 +23,9 @@ ChartJS.register(
 );
 
 function MethaneChart() {
-  const { data, isLoading } = useFetchData("https://global-warming.org/api/methane-api");
+  const { data, isLoading } = useFetchData(
+    "https://global-warming.org/api/methane-api",
+  );
 
   // Extracting necessary data from the fetched data
   let trend = data?.methane?.map((item) => item.trend);
@@ -90,10 +91,10 @@ function MethaneChart() {
 
   return (
     <>
-    {/*Render chart */}
-        <div className={style.backgroundChart}>
-          <Line data={chartData} options={options} />
-        </div>
+      {/*Render chart */}
+      <div className={style.backgroundChart}>
+        <Line data={chartData} options={options} />
+      </div>
     </>
   );
 }

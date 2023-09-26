@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-
 export const useFetchData = (url) => {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(false);
@@ -24,4 +23,3 @@ export const useFetchData = (url) => {
 
   return { data, isLoading }; // Returns the fetched data and loading state
 };
-

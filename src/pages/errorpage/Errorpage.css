@@ -1,41 +1,41 @@
 * {
-    padding: 0;
-    margin: 0;
-  }
+  padding: 0;
+  margin: 0;
+}
 
-  /* Background image for the banner */
-  .banner {
-    background-image: url("../../assets/img/globalwarming.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+/* Background image for the banner */
+.banner {
+  background-image: url("../../assets/img/globalwarming.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* Font size for the text */
-  .text {
-    font-size: 20px;
-  }
+/* Font size for the text */
+.text {
+  font-size: 20px;
+}
 
-  /* Font size for the error message */
+/* Font size for the error message */
+.error {
+  font-size: 50px;
+}
+
+/* Media query for screen width up to 576px */
+@media only screen and (max-width: 576px) {
+  /* Adjusted font size for error message on smaller screens */
   .error {
-    font-size: 50px;
+    font-size: 19px;
   }
 
-  /* Media query for screen width up to 576px */
-  @media only screen and (max-width: 576px) {
-    /* Adjusted font size for error message on smaller screens */
-    .error {
-      font-size: 19px;
-    }
-
-    /* Adjusted font size for text on smaller screens */
-    .text {
-      font-size: 12px;
-    }
+  /* Adjusted font size for text on smaller screens */
+  .text {
+    font-size: 12px;
   }
+}
