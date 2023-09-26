@@ -5,6 +5,7 @@ import style from "./Hero.module.css";
 export default function Hero({ title, description }) {
   return (
     <article>
+      {/* Title and description render */}
       <div className={style.container}>
         <div className={style.title}>
           <Title text={title} />
