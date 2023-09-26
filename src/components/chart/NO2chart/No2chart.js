@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { useNo2FetchData } from "../../api/ClientAPI";
+import { useFetchData } from "../../api/ClientAPI";
 import Loading from "../../loading/Loading";
 import style from "./No2.module.css";
 
@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function No2Chart() {
-  const { no2Data, no2Loading } = useNo2FetchData();
+  const { no2Data, no2Loading } = useFetchData("https://global-warming.org/api/nitrous-oxide-api");
   let trend = no2Data?.nitrous?.map((item) => item.trend);
   let average = no2Data?.nitrous?.map((item) => item.average);
   let no2Time = no2Data?.nitrous?.map((item) => `${item.date}`);

@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { useCo2FetchData } from "../../api/ClientAPI";
+import { useFetchData } from "../../api/ClientAPI";
 import Loading from "../../loading/Loading";
 import style from "./Co2.module.css";
 
@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function Chart() {
-  const { co2Data, co2Loading } = useCo2FetchData();
+  const { data: co2Data, isLoading: co2Loading } = useFetchData("https://global-warming.org/api/co2-api");
   let trend = co2Data?.co2?.map((item) => item.trend);
   let cycle = co2Data?.co2?.map((item) => item.cycle);
   let co2Time = co2Data?.co2?.map(

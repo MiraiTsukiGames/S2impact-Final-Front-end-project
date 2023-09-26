@@ -45,8 +45,8 @@ i18next
           dark: "Dark Mode",
           light: "Light Mode",
           text: "Contact me",
-          error: "Page not found",
-          page404: "The page you are looking for is not available."
+          error: "Page could not be found",
+          page404: "This page could not be found."
         },
       },
       it: {
@@ -84,8 +84,8 @@ i18next
           dark: "Modalità Scura",
           light: "Modalità Chiara",
           text: "Contattami",
-          error: "Pagina non trovata",
-          page404: "La pagina che stai cercando non è disponibile."
+          error: "La pagina non è stata trovata",
+          page404: "Ci dispiace, la pagina richiesta non è stata trovata."
         },
       },
     },
