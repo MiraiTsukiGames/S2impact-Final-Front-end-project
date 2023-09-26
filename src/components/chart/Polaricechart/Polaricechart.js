@@ -24,6 +24,8 @@ ChartJS.register(
 
 function PolarIceChart() {
   const { data, isLoading } = useFetchData("https://global-warming.org/api/arctic-api");
+
+  // Extracting necessary data from the fetched data
   let area = data?.arcticData?.map((item) => `${item.area}`);
   let extent = data?.arcticData?.map((item) => `${item.extent}`);
   let arcticTime = data?.arcticData?.map(
@@ -32,9 +34,10 @@ function PolarIceChart() {
   let rank = data?.arcticData?.map((item) => `${item.rank}`);
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading />; // Renders a loading component if data is still being fetched
   }
 
+  // Chart styling
   const chartData = {
     labels: arcticTime,
     datasets: [
@@ -61,6 +64,8 @@ function PolarIceChart() {
       },
     ],
   };
+
+  // Chart options
   const options = {
     plugins: {
       legend: true,
@@ -94,6 +99,7 @@ function PolarIceChart() {
 
   return (
     <>
+    {/*Render chart */}
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>

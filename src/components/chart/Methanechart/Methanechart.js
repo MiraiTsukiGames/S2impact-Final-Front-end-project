@@ -25,14 +25,17 @@ ChartJS.register(
 
 function MethaneChart() {
   const { data, isLoading } = useFetchData("https://global-warming.org/api/methane-api");
+
+  // Extracting necessary data from the fetched data
   let trend = data?.methane?.map((item) => item.trend);
   let average = data?.methane?.map((item) => item.average);
   let methaneTime = data?.methane?.map((item) => `${item.date}`);
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading />; // Renders a loading component if data is still being fetched
   }
 
+  // Chart styling
   const chartData = {
     labels: methaneTime,
     datasets: [
@@ -52,6 +55,8 @@ function MethaneChart() {
       },
     ],
   };
+
+  // Chart options
   const options = {
     plugins: {
       legend: true,
@@ -85,6 +90,7 @@ function MethaneChart() {
 
   return (
     <>
+    {/*Render chart */}
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>

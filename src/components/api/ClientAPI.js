@@ -1,10 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+
+
 export const useFetchData = (url) => {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    // Fetches data from the provided URL
     const fetchData = async () => {
       try {
         setLoading(true);
@@ -16,9 +19,9 @@ export const useFetchData = (url) => {
         throw new Error(error);
       }
     };
-    fetchData();
+    fetchData(); // Calls fetchData function when the component mounts or when the URL changes
   }, [url]);
 
-  return { data, isLoading };
+  return { data, isLoading }; // Returns the fetched data and loading state
 };
 

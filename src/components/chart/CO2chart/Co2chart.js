@@ -24,6 +24,9 @@ ChartJS.register(
 
 function Chart() {
   const { data, isLoading } = useFetchData("https://global-warming.org/api/co2-api");
+
+
+  // Extracting necessary data from the fetched data
   let trend = data?.co2?.map((item) => item.trend);
   let cycle = data?.co2?.map((item) => item.cycle);
   let co2Time = data?.co2?.map(
@@ -31,9 +34,10 @@ function Chart() {
   );
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading />; // Renders a loading component if data is still being fetched
   }
 
+  // Chart styling
   const chartData = {
     labels: co2Time,
     datasets: [
@@ -54,6 +58,7 @@ function Chart() {
     ],
   };
 
+  // Chart options
   const options = {
     plugins: {
       legend: true,
@@ -87,6 +92,7 @@ function Chart() {
 
   return (
     <>
+      {/*Render chart */}
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>

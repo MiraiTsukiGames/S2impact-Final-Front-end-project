@@ -24,14 +24,17 @@ ChartJS.register(
 
 function No2Chart() {
   const { data, isLoading } = useFetchData("https://global-warming.org/api/nitrous-oxide-api");
+
+  // Extracting necessary data from the fetched data
   let trend = data?.nitrous?.map((item) => item.trend);
   let average = data?.nitrous?.map((item) => item.average);
   let no2Time = data?.nitrous?.map((item) => `${item.date}`);
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading />; // Renders a loading component if data is still being fetched
   }
 
+  // Chart styling
   const chartData = {
     labels: no2Time,
     datasets: [
@@ -51,6 +54,8 @@ function No2Chart() {
       },
     ],
   };
+
+  // Chart options
   const options = {
     plugins: {
       legend: true,
@@ -84,6 +89,7 @@ function No2Chart() {
 
   return (
     <>
+    {/*Render chart */}
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>

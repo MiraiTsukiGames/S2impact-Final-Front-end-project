@@ -24,14 +24,17 @@ ChartJS.register(
 
 function TemperatureChart() {
   const { data, isLoading } = useFetchData("https://global-warming.org/api/temperature-api");
+
+  // Extracting necessary data from the fetched data
   let temperatureTime = data?.result?.map((item) => `${item.time}`);
   let station = data?.result?.map((item) => `${item.station}`);
   let land = data?.result?.map((item) => `${item.land}`);
 
   if (isLoading) {
-    return <Loading />;
+    return <Loading />; // Renders a loading component if data is still being fetched
   }
 
+  // Chart styling
   const chartData = {
     labels: temperatureTime,
     datasets: [
@@ -51,6 +54,8 @@ function TemperatureChart() {
       },
     ],
   };
+
+  // Chart options
   const options = {
     plugins: {
       legend: true,
@@ -84,6 +89,7 @@ function TemperatureChart() {
 
   return (
     <>
+    {/*Render chart */}
         <div className={style.backgroundChart}>
           <Line data={chartData} options={options} />
         </div>
