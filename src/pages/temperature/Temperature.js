@@ -1,7 +1,7 @@
 import React from "react";
-import TemperatureChart from "../../components/chart/Temperaturechart/Temperaturechart";
+import TemperatureChart from "../../components/chart/Temperaturechart/Temperaturechart.js";
 import { Helmet } from "react-helmet-async";
-import Hero from "../../components/hero/Hero";
+import Hero from "../../components/hero/Hero.js";
 import style from "./Temperature.module.css";
 
 const Temperature = ({ t }) => {
