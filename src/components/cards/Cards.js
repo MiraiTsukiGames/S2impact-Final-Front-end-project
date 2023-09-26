@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../button/Button";
+import Button from "../button/Button.js";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import style from "./Cards.module.css";
