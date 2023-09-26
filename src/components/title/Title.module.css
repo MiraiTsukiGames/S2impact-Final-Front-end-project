@@ -1,7 +1,9 @@
+/* Title styling */
 .title {
   font-size: 50px;
 }
 
+/* Media query */
 @media only screen and (max-width: 576px) {
   .title {
     font-size: 30px;
