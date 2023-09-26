@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function PolarIceChart() {
-  const { polarData, isLoading } = useArcticFetchData();
+  const { polarData, isPolarIceLoading } = useArcticFetchData();
   let area = polarData?.arcticData?.map((item) => `${item.area}`);
   let extent = polarData?.arcticData?.map((item) => `${item.extent}`);
   let arcticTime = polarData?.arcticData?.map(
@@ -90,7 +90,7 @@ function PolarIceChart() {
 
   return (
     <>
-      {isLoading ? (
+      {isPolarIceLoading ? (
         <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>
