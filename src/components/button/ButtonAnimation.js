@@ -2,9 +2,11 @@ import React from "react";
 import style from "./ButtonAnimation.module.css";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
+// Button animation function
 const ButtonAnimation = (props) => {
   const { onClick, icon } = props;
 
+  // Switch render icon
   const renderIcon = () => {
     switch (icon) {
       case "arrowUp":
@@ -15,6 +17,7 @@ const ButtonAnimation = (props) => {
     }
   };
 
+  // Render button
   return (
     <button onClick={onClick} className={style.animation}>
       {renderIcon()}
