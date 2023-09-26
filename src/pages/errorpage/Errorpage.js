@@ -5,7 +5,7 @@ import "./Errorpage.css";
 export default function ErrorPage({ t }) {
   return (
     <>
-    {/* title */}
+    {/* Title */}
     <Helmet>
     <title>Error-404</title>
   </Helmet>
