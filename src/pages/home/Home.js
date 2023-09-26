@@ -20,7 +20,6 @@ const Home = ({ t }) => {
   useEffect(() => {
     const handleScroll = () => {
       setScrollTop(window.scrollY);
-      console.log(scrollTop);
     };
 
     window.addEventListener("scroll", handleScroll);
