@@ -1,7 +1,7 @@
 import React from "react";
-import MethaneChart from "../../components/chart/Methanechart/Methanechart";
+import MethaneChart from "../../components/chart/Methanechart/Methanechart.js";
 import { Helmet } from "react-helmet-async";
-import Hero from "../../components/hero/Hero";
+import Hero from "../../components/hero/Hero.js";
 import style from "./Methane.module.css";
 
 const Methane = ({ t }) => {
