@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function MethaneChart() {
-  const { methaneData, methaneLoading } = useFetchData("https://global-warming.org/api/methane-api");
+  const { data: methaneData, isLoading: methaneLoading } = useFetchData("https://global-warming.org/api/methane-api");
   let trend = methaneData?.methane?.map((item) => item.trend);
   let average = methaneData?.methane?.map((item) => item.average);
   let methaneTime = methaneData?.methane?.map((item) => `${item.date}`);

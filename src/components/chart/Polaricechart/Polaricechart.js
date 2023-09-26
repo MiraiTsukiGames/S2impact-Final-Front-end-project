@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function PolarIceChart() {
-  const { polarIceData, polarIceLoading } = useFetchData("https://global-warming.org/api/arctic-api");
+  const { data: polarIceData, isLoading: polarIceLoading } = useFetchData("https://global-warming.org/api/arctic-api");
   let area = polarIceData?.arcticData?.map((item) => `${item.area}`);
   let extent = polarIceData?.arcticData?.map((item) => `${item.extent}`);
   let arcticTime = polarIceData?.arcticData?.map(

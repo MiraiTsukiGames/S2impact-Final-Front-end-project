@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function No2Chart() {
-  const { no2Data, no2Loading } = useFetchData("https://global-warming.org/api/nitrous-oxide-api");
+  const { data: no2Data, isLoading: no2Loading } = useFetchData("https://global-warming.org/api/nitrous-oxide-api");
   let trend = no2Data?.nitrous?.map((item) => item.trend);
   let average = no2Data?.nitrous?.map((item) => item.average);
   let no2Time = no2Data?.nitrous?.map((item) => `${item.date}`);

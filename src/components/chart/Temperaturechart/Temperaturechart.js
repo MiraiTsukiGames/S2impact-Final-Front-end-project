@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function TemperatureChart() {
-  const { temperatureData, temperatureLoading } = useFetchData("https://global-warming.org/api/temperature-api");
+  const { data: temperatureData, isLoading: temperatureLoading } = useFetchData("https://global-warming.org/api/temperature-api");
   let temperatureTime = temperatureData?.result?.map((item) => `${item.time}`);
   let station = temperatureData?.result?.map((item) => `${item.station}`);
   let land = temperatureData?.result?.map((item) => `${item.land}`);
