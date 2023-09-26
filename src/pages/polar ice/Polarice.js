@@ -1,7 +1,7 @@
 import React from "react";
-import PolarIceChart from "../../components/chart/Polaricechart/Polaricechart";
+import PolarIceChart from "../../components/chart/Polaricechart/Polaricechart.js";
 import { Helmet } from "react-helmet-async";
-import Hero from "../../components/hero/Hero";
+import Hero from "../../components/hero/Hero.js";
 import style from "./Polarice.module.css";
 
 const PolarIce = ({ t }) => {
