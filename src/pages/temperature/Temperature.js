@@ -8,7 +8,9 @@ const Temperature = ({ t }) => {
 
   return (
     <>
+    {/* Metadata and title tag */}
      <Helmet>
+     {/* Set the title for the page using translation */}
       <title>{t("Temperature")} {t("title3")}</title>
       <meta name="description" content="temperature data" />
       <meta name="keywords" content="temperature, temperature grafico, temperature chart" />
@@ -17,11 +19,13 @@ const Temperature = ({ t }) => {
 
     <section className={style.container}>
     <div className={style.heroContainer}>
+     {/* Render the Hero component with translated title and description */}
       <Hero
         title={t("Temperature")}
         description={t("temperaturedescription")}
       />
       </div>
+      {/* Render the TemperatureChart component */}
       <TemperatureChart />
     </section>
     </>
