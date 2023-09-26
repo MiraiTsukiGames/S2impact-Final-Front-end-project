@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Button.module.css";
 
+// Button function
 export default function Button(props) {
   return (
     <div className={style.container}>

@@ -1,3 +1,4 @@
+/* Button styling */
 .Button {
   font-size: 18px;
   background-color: rgb(255, 102, 0);
@@ -8,6 +9,7 @@
   font-weight: bold;
 }
 
+/* Button hover styling */
 .Button:hover {
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -17,12 +19,14 @@
   font-size: 18px;
 }
 
+/* Container styling */
 .container {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
+/* Media query width 576px */
 @media only screen and (max-width: 576px) {
   .Button {
     padding: 10px 20px;
