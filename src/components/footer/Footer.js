@@ -4,12 +4,15 @@ import style from "./Footer.module.css";
 
 export default function footer({ t }) {
 
+  // Render footer
   return (
     <footer className={style.footerContainer}>
+    {/* Horizontal line */}
     <hr />
+    {/* Footer content render*/}
     <div className={style.footerContent}>
-      <p className={style.paragraph}>{t("text")}</p>
-      <ul className={style.socials}>
+      <p className={style.paragraph}>{t("text")}</p> {/* Paragraph translation*/}
+      <ul className={style.socials}> {/* Socials */}
         <li className={style.link}>
           <a target="_blank" href="https://github.com/MiraiTsukiGames" rel="noreferrer">
             <FaGithub />
@@ -27,7 +30,7 @@ export default function footer({ t }) {
         </li>
       </ul>
     </div>
-    <div className={style.footerBottom}>
+    <div className={style.footerBottom}> {/* Copyright container */}
       <p className={style.copyRightText}>Copyright&copy; {new Date().getFullYear()} Samanta Mancini</p>
     </div>
   </footer>
