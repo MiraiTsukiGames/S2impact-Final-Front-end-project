@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function TemperatureChart() {
-  const { temperatureData, isTemperatureLoading } = useTemperatureFetchData();
+  const { temperatureData, temperatureLoading } = useTemperatureFetchData();
   let temperatureTime = temperatureData?.result?.map((item) => `${item.time}`);
   let station = temperatureData?.result?.map((item) => `${item.station}`);
   let land = temperatureData?.result?.map((item) => `${item.land}`);
@@ -80,7 +80,7 @@ function TemperatureChart() {
 
   return (
     <>
-      {isTemperatureLoading ? (
+      {temperatureLoading ? (
         <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>

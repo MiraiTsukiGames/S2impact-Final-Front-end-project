@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function MethaneChart() {
-  const { methaneData, isMethaneLoading } = useMethaneFetchData();
+  const { methaneData, methaneLoading } = useMethaneFetchData();
   let trend = methaneData?.methane?.map((item) => item.trend);
   let average = methaneData?.methane?.map((item) => item.average);
   let methaneTime = methaneData?.methane?.map((item) => `${item.date}`);
@@ -80,7 +80,7 @@ function MethaneChart() {
 
   return (
     <>
-      {isMethaneLoading ? (
+      {methaneLoading ? (
         <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>

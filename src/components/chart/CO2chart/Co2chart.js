@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function Chart() {
-  const { co2Data, isCo2Loading } = useCo2FetchData();
+  const { co2Data, co2Loading } = useCo2FetchData();
   let trend = co2Data?.co2?.map((item) => item.trend);
   let cycle = co2Data?.co2?.map((item) => item.cycle);
   let co2Time = co2Data?.co2?.map(
@@ -83,7 +83,7 @@ function Chart() {
 
   return (
     <>
-      {isCo2Loading ? (
+      {co2Loading ? (
         <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>

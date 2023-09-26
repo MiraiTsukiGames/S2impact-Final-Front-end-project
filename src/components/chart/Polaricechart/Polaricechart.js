@@ -23,13 +23,13 @@ ChartJS.register(
 );
 
 function PolarIceChart() {
-  const { polarData, isPolarIceLoading } = useArcticFetchData();
-  let area = polarData?.arcticData?.map((item) => `${item.area}`);
-  let extent = polarData?.arcticData?.map((item) => `${item.extent}`);
-  let arcticTime = polarData?.arcticData?.map(
+  const { polarIceData, polarIceLoading } = useArcticFetchData();
+  let area = polarIceData?.arcticData?.map((item) => `${item.area}`);
+  let extent = polarIceData?.arcticData?.map((item) => `${item.extent}`);
+  let arcticTime = polarIceData?.arcticData?.map(
     (item) => `${item.year}/${item.month}`,
   );
-  let rank = polarData?.arcticData?.map((item) => `${item.rank}`);
+  let rank = polarIceData?.arcticData?.map((item) => `${item.rank}`);
 
   const chartData = {
     labels: arcticTime,
@@ -90,7 +90,7 @@ function PolarIceChart() {
 
   return (
     <>
-      {isPolarIceLoading ? (
+      {polarIceLoading ? (
         <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>

@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function No2Chart() {
-  const { no2Data, isNo2Loading } = useNo2FetchData();
+  const { no2Data, no2Loading } = useNo2FetchData();
   let trend = no2Data?.nitrous?.map((item) => item.trend);
   let average = no2Data?.nitrous?.map((item) => item.average);
   let no2Time = no2Data?.nitrous?.map((item) => `${item.date}`);
@@ -80,7 +80,7 @@ function No2Chart() {
 
   return (
     <>
-      {isNo2Loading ? (
+      {no2Loading ? (
         <div><Loading /></div>
       ) : (
         <div className={style.backgroundChart}>
