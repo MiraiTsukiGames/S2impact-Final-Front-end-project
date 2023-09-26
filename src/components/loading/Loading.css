@@ -1,9 +1,12 @@
+/* Loading container styling */
 .loading-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+/* Loading styling */
 .loading {
     width: 30%;
     height: auto;
