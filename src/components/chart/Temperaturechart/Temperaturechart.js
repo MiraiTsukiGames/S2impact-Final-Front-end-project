@@ -10,7 +10,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { useTemperatureFetchData } from "../../api/ClientAPI";
+import { useFetchData } from "../../api/ClientAPI";
 import style from "./Temperature.module.css";
 
 ChartJS.register(
@@ -23,7 +23,7 @@ ChartJS.register(
 );
 
 function TemperatureChart() {
-  const { temperatureData, temperatureLoading } = useTemperatureFetchData();
+  const { temperatureData, temperatureLoading } = useFetchData("https://global-warming.org/api/temperature-api");
   let temperatureTime = temperatureData?.result?.map((item) => `${item.time}`);
   let station = temperatureData?.result?.map((item) => `${item.station}`);
   let land = temperatureData?.result?.map((item) => `${item.land}`);
