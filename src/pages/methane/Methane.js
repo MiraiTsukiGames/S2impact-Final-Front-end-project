@@ -8,6 +8,7 @@ const Methane = ({ t }) => {
 
   return (
     <>
+    {/* Metadata and title tag */}
     <Helmet>
     {/* Set the title for the page using translation */}
       <title>{t("methane")} {t("title3")}</title>

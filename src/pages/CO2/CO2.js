@@ -11,6 +11,7 @@ const CO2 = ({ t }) => {
     <>
     {/* Metadata and title tag */}
     <Helmet>
+    {/* Set the title for the page using translation */}
     <title>Co2 {t("title3")}</title>
     <meta name="description" content="dioxide carbon data" />
     <meta name="keywords" content="co2, grafico, co2 chart" />
