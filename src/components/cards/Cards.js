@@ -7,7 +7,6 @@ import style from "./Cards.module.css";
 // Cards function
 const Cards = ({ scroll }) => {
   const navigate = useNavigate(); // useNavigation
-
   const { t } = useTranslation(); // useTranslation
 
   return (
@@ -29,10 +28,7 @@ const Cards = ({ scroll }) => {
           {/* Title Temperature fetched from translation */}
           <p className={style.cardDescription}>{t("description3")}</p>
           {/* Description Temperature fetched from translation */}
-          <Button
-            text={t("load")}
-            onClick={() => navigate("temperature")}
-          />
+          <Button text={t("load")} onClick={() => navigate("temperature")} />
           {/* Button text fetched from translation and navigate temperature page*/}
         </div>
         <div className={style.cardBody}>
