@@ -39,19 +39,19 @@ This is the mobile layout. Just changed the menu in a sidebar menu and the "arro
 ## Tecnologies⚛️
 
 - [React.js](https://react.dev/)
-- [Visual studio Code]
+- [Visual studio Code](https://code.visualstudio.com/)
 
 ## Libraries
 
-- [React-helmet]
-- [Chart.js]
-- [React-icons]
-- [React-router]
-- [i18next]
+- [React-helmet](https://www.npmjs.com/package/react-helmet)
+- [Chart.js](https://www.chartjs.org/docs/latest/)
+- [React-icons](https://react-icons.github.io/react-icons/)
+- React-router
+- [i18next](https://www.npmjs.com/package/react-i18next)
 
 ## API
 
-- [global-warming.org/api](https://global-warming.org/)
+- [global-warming.org](https://global-warming.org/)
 
 ## Try it!
 
