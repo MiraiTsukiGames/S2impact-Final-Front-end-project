@@ -6,8 +6,10 @@ import Hero from "../../components/hero/Hero.js";
 import style from "./Home.module.css";
 
 const Home = ({ t }) => {
+
   // Ref to scroll into view
   const ref = useRef(null);
+  
   // State to track scroll position
   const [scrollTop, setScrollTop] = useState(0);
 
@@ -57,10 +59,8 @@ const Home = ({ t }) => {
           {/* Render the ButtonAnimation component for scrolling down */}
           <ButtonAnimation onClick={handleScrollDown} icon="arrowDown" />
         </div>
-
         {/* Render the Cards component with scroll prop */}
         <Cards scroll={ref} />
-
         {/* Show scroll up button when scrollTop is greater than 800 */}
         <div className={`${scrollTop > 800 ? style.show : style.hide}`}>
           {/* Render the ButtonAnimation component for scrolling up */}
