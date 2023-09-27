@@ -59,15 +59,12 @@ const Home = ({ t }) => {
           {/* Render the ButtonAnimation component for scrolling down */}
           <ButtonAnimation onClick={handleScrollDown} icon="arrowDown" />
         </div>
-<<<<<<< HEAD
         {/* Render the Cards component with scroll prop */}
         <Cards scroll={ref} />
         {/* Show scroll up button when scrollTop is greater than 800 */}
-=======
           {/* Render the Cards component with scroll prop */}
         <Cards scroll={ref} />
           {/* Show scroll up button when scrollTop is greater than 800 */}
->>>>>>> a8c7e8b342a2381919db9cb4253b70220de91771
         <div className={`${scrollTop > 800 ? style.show : style.hide}`}>
           {/* Render the ButtonAnimation component for scrolling up */}
           <ButtonAnimation onClick={handleScrollUp} icon="arrowUp" />
