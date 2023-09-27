@@ -64,7 +64,7 @@ First all install [Node.js](https://nodejs.org/it)
 ## Clone project
 
 copy and paste
-`https://github.com/MiraiTsukiGames/S2-Impact-React-Project.git`
+`https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project.git`
 
 `npm install` for install the dependeces
 
