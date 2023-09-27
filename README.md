@@ -10,12 +10,12 @@ Once the website is open, the home screen is available if the user wants to see 
 If the user clicked the button, they can see 5 cards and click the orange button: "Load graph". The arrow up button is to scroll up.
 ![Immagine5](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/b16b0803-65e1-4b1d-a7f9-0e9f3dee26dc)
 
-## Co2 page 
-This is the co2 graph with a description on what is the co2.
+## CO2 page 
+This is the CO2 graph with a description on what is the CO2.
 
 Extra:
--Loading for load the apis.
-- Contacts in the footer: github, linkedin and e-mail.
+- Loading for load the apis.
+- Footer: I added my contacts of github, linkedin and e-mail and a dynamic date for the copyright.
 - Change language: the user can change a language (Italian or English)
 - Light/Dark mode switch: the user can use it if they want to change the mode. <br>
   ![Immagine4](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/32b90158-fce3-412f-ac4f-6ca7cdac9a33)
