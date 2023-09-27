@@ -51,7 +51,7 @@ This is the mobile layout. Just changed the menu in a sidebar menu and the "arro
 
 ## API
 
-- [global-warming.org/api]
+- [global-warming.org/api](https://global-warming.org/)
 
 ## Try it!
 
