@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Climate Change Alert
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A website that shows some dashboards about climate change on our planet.
 
-## Available Scripts
+## How to works?❓
 
-In the project directory, you can run:
+Once the website is open, the home screen is available if the user wants to see the dashboards, just click the "Arrow down" button or at the top right click the link and open the wished page.
+![Cover](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/e008a16d-2868-4dec-bcbb-cf265448517b)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If the user clicked the button, they can see 5 cards and click the orange button: "Load graph". The arrow up button is to scroll up.
+![parte2](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/5dd25b3d-01e0-40b0-bed2-855d29337298)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## CO2 page 
+This is the CO2 graph with a description on what is the CO2.
+![co2 grafico](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/66ed1f88-f8d2-4ebb-a59d-9849af956f53)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Extra:
+- Loading for load the apis.
+- Footer: I added my contacts of github, linkedin and e-mail and a dynamic date for the copyright.
+- Change language: the user can change a language (Italian or English)
+- Light/Dark mode switch: the user can use it if they want to change the mode. <br>
+![co2modalitàscura](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/7383f32d-2d46-488f-baea-9273b01f4aac)
+![loading](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/0f5fbd5b-d3ba-4a73-999f-b121c8d5ba19)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Mobile📱
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is the mobile layout. Just changed the menu in a sidebar menu and the "arrow up" shows when the user scrolls down.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ![mobile1](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/99df2926-dd74-41ca-a3ff-c25fe937b133)
 
-### `npm run eject`
+  ![home2](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/bf2e62f2-2044-4f4f-86f1-03527560badf)
+  ![home3](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/602a77af-678a-4321-9388-0e25a2dd4162)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tecnologies⚛️
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [React.js](https://react.dev/)
+- [Visual studio Code](https://code.visualstudio.com/)
 
-## Learn More
+## Libraries
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [React-helmet](https://www.npmjs.com/package/react-helmet)
+- [Chart.js](https://www.chartjs.org/docs/latest/)
+- [React-icons](https://react-icons.github.io/react-icons/)
+- React-router
+- [i18next](https://www.npmjs.com/package/react-i18next)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API
 
-### Code Splitting
+- [global-warming.org](https://global-warming.org/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Try it!
 
-### Analyzing the Bundle Size
+[Climate Change Alert](https://climatechangealert.netlify.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Installation💾
 
-### Making a Progressive Web App
+First all install [Node.js](https://nodejs.org/it)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Clone project
 
-### Advanced Configuration
+copy and paste
+`https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project.git`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`npm install` for install the dependeces
 
-### Deployment
+## npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+`npm start` for start the project
 
-### `npm run build` fails to minify
+## Contact📧
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+if you want contact me
+Linkedin profile: [Samanta Mancini](https://www.linkedin.com/in/samantamancini/)

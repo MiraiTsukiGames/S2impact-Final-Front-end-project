@@ -20,7 +20,6 @@ const Temperature = ({ t }) => {
         />
         <meta name="author" content="Samanta Mancini" />
       </Helmet>
-
       <section className={style.container}>
         <div className={style.heroContainer}>
           {/* Render the Hero component with translated title and description */}

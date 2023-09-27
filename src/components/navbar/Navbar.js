@@ -23,18 +23,17 @@ export default function Navbar({ t, i18n }) {
           className={i18n.language === "it" ? "button-active" : "button"}
         >
           Italiano
-        </button>{" "}
+        </button>
         {/* Italian button */}
         <button
           onClick={() => changeLanguage("en")}
           className={i18n.language === "en" ? "button-active" : "button"}
         >
           English
-        </button>{" "}
+        </button>
         {/* English button */}
       </div>
       <div className="navbar-container">
-        {" "}
         {/* Logo render */}
         <img src={Logo} className="brand-name" alt="logo" />
         {/*hamburger button*/}

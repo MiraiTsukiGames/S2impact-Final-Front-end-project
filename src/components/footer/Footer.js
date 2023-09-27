@@ -10,10 +10,9 @@ export default function footer({ t }) {
       <hr />
       {/* Footer content render*/}
       <div className={style.footerContent}>
-        <p className={style.paragraph}>{t("text")}</p>{" "}
+        <p className={style.paragraph}>{t("text")}</p>
         {/* Paragraph translation*/}
         <ul className={style.socials}>
-          {" "}
           {/* Socials */}
           <li className={style.link}>
             <a
@@ -45,7 +44,6 @@ export default function footer({ t }) {
         </ul>
       </div>
       <div className={style.footerBottom}>
-        {" "}
         {/* Copyright container */}
         <p className={style.copyRightText}>
           Copyright&copy; {new Date().getFullYear()} Samanta Mancini
