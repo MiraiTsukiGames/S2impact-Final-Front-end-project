@@ -2,69 +2,59 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## How to works?❓
 
-In the project directory, you can run:
+Once the website is open, the home screen is available if the user wants to start the meditation, just click the "Getting started" button or at the top right to open the sidebar and click on timer.
+![Immagine6](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/e3dd83cf-8922-4a88-94a3-499a34756677)
 
-### `npm start`
+Before clicking the play button. The user must set a timer such as hours, minutes and seconds otherwise if it is at zero the timer will not start.
+You can choose background music if you want. Once the timer is activated, background music plays and inputs and sounds are disabled until the timer reaches zero or stops it.
+![Immagine5](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/b16b0803-65e1-4b1d-a7f9-0e9f3dee26dc)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Extra:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Quotes: if you click quotes button you can read the phrases of famous authors.
+- Light/Dark mode switch: you can use it if you want to change the mode. <br>
+  ![Immagine4](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/32b90158-fce3-412f-ac4f-6ca7cdac9a33)
 
-### `npm test`
+## Mobile📱
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is the mobile layout.
 
-### `npm run build`
+- Home portrait <br>
+  ![Immagine](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/7cfc3f21-4430-4b90-a681-f7723b8393a5)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Home landscape <br>
+  ![Immagine3](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/88d0c601-5a0e-4219-ade4-b1dced0dfd47)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Timer <br>
+  ![Immagine](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/ab3a3821-3b73-478e-971d-7165eadc4da1)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Languages⚛️
 
-### `npm run eject`
+- [React.js](https://react.dev/)
+- [Quotable.io](https://api.quotable.io)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Try it!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Borcelle Yoga Studio](https://borcelleyogastudio.netlify.app/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation💾
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+First all install [Node.js](https://nodejs.org/it)
 
-## Learn More
+## Clone project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+copy and paste
+`https://github.com/MiraiTsukiGames/S2-Impact-React-Project.git`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm install` for install the dependeces
 
-### Code Splitting
+## npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`npm start` for start the project
 
-### Analyzing the Bundle Size
+## Contact📧
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+if you want contact me
+Linkedin profile: [Samanta Mancini](https://www.linkedin.com/in/samantamancini/)
