@@ -21,7 +21,6 @@ Extra:
 - Footer: I added my contacts of github, linkedin and e-mail and a dynamic date for the copyright.
 - Change language: the user can change a language (Italian or English)
 - Light/Dark mode switch: the user can use it if they want to change the mode. <br>
-  ![Immagine4](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/32b90158-fce3-412f-ac4f-6ca7cdac9a33)
 ![co2modalitàscura](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/7383f32d-2d46-488f-baea-9273b01f4aac)
 ![loading](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/0f5fbd5b-d3ba-4a73-999f-b121c8d5ba19)
 
