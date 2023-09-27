@@ -29,7 +29,6 @@ Extra:
 
 This is the mobile layout. Just changed the menu in a sidebar menu and the "arrow up" shows when the user scrolls down.
 
-- Home portrait <br>
   ![mobile1](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/99df2926-dd74-41ca-a3ff-c25fe937b133)
 
   ![home2](https://github.com/MiraiTsukiGames/S2impact-Final-Front-end-project/assets/118011618/bf2e62f2-2044-4f4f-86f1-03527560badf)
