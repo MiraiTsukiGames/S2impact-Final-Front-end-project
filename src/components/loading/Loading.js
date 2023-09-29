@@ -1,12 +1,12 @@
 import React from "react";
-import Spinner from "../../assets/img/gif/loading.gif";
+import { Vortex } from "react-loader-spinner";
 import "./Loading.css";
 
 export default function Loading() {
   return (
     <div className="loading-container">
       {/* Render loading */}
-      <img src={Spinner} className="loading" alt="gif" />
+      <Vortex color="#00BFFF" height={100} />
       <p>Loading...</p>
     </div>
   );
