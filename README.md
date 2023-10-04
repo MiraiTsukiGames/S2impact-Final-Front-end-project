@@ -54,6 +54,9 @@ This is the mobile layout. Just changed the menu in a sidebar menu and the "arro
 
 [Climate Change Alert](https://climatechangealert.netlify.app/)
 
+## Local
+If you want to download the project locally, you can follow the instructions below.
+
 ## Installation💾
 
 First all install [Node.js](https://nodejs.org/it)
