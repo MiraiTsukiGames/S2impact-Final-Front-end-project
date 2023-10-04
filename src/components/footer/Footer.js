@@ -17,7 +17,7 @@ export default function footer({ t }) {
           <li className={style.link}>
             <a
               target="_blank"
-              href="https://github.com/MiraiTsukiGames"
+              href="https://github.com/SamantaMancini"
               rel="noreferrer"
             >
               <FaGithub />
